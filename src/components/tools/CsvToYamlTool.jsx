@@ -92,7 +92,7 @@ const CsvToYamlTool = () => {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         <div className="space-y-2">
           <label htmlFor="csv-input" className="text-lg font-semibold text-gray-700 flex items-center">
-            <FileText className="w-5 h-5 mr-2 text-red-500" />
+            <FileText className="w-5 h-5 mr-2 text-blue-500" />
             {t('csvToYaml.csvInputLabel')}
           </label>
           <Textarea
@@ -100,25 +100,25 @@ const CsvToYamlTool = () => {
             value={csvContent}
             onChange={(e) => setCsvContent(e.target.value)}
             placeholder={t('csvToYaml.placeholder')}
-            className="min-h-[300px] text-base border-gray-300 focus:ring-red-500 focus:border-red-500 font-mono"
+            className="min-h-[300px] text-base border-gray-300 focus:ring-blue-500 focus:border-blue-500 font-mono"
           />
         </div>
         <div className="space-y-2">
           <label htmlFor="result-output" className="text-lg font-semibold text-gray-700 flex items-center">
-            <FileCode className="w-5 h-5 mr-2 text-red-500" />
+            <FileCode className="w-5 h-5 mr-2 text-blue-500" />
             {t('csvToYaml.resultLabel')}
           </label>
           <Textarea
             id="result-output"
             value={result}
             readOnly
-            className="min-h-[300px] text-base bg-gray-50 border-gray-300 focus:ring-red-500 focus:border-red-500 font-mono"
+            className="min-h-[300px] text-base bg-gray-50 border-gray-300 focus:ring-blue-500 focus:border-blue-500 font-mono"
           />
         </div>
       </div>
       
       <div className="flex flex-wrap gap-4">
-        <Button onClick={handleConvert} className="bg-red-600 hover:bg-red-700 text-white font-bold text-lg py-6 flex-grow">
+        <Button onClick={handleConvert} className="bg-blue-600 hover:bg-blue-700 text-white font-bold text-lg py-6 flex-grow">
           <Wand2 className="w-6 h-6 mr-2" />
           {t('csvToYaml.convertButton')}
         </Button>

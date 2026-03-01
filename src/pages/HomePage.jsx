@@ -101,9 +101,9 @@ function HomePage() {
         toolUrl={siteUrl}
       />
 
-      <div className="min-h-screen bg-gradient-to-br from-white via-red-50 to-white">
+      <div className="min-h-screen bg-gradient-to-br from-white via-blue-50 to-white">
         
-        <header className="bg-red-600 shadow-lg">
+        <header className="bg-blue-600 shadow-lg">
           <div className="container mx-auto px-4 py-8">
             <motion.div
               initial={{ opacity: 0, y: -20 }}
@@ -129,24 +129,24 @@ function HomePage() {
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.5, delay: 0.2 }}
-            className="bg-white rounded-3xl shadow-2xl border-4 border-red-600 p-8 md:p-12"
+            className="bg-white rounded-3xl shadow-2xl border-4 border-blue-600 p-8 md:p-12"
           >
-            <div className="mb-8 bg-red-50 rounded-2xl p-6 border-2 border-red-200">
-              <h2 className="text-3xl md:text-4xl font-bold text-red-700 mb-4 flex items-center gap-3">
+            <div className="mb-8 bg-blue-50 rounded-2xl p-6 border-2 border-blue-200">
+              <h2 className="text-3xl md:text-4xl font-bold text-blue-700 mb-4 flex items-center gap-3">
                 <CheckCircle2 className="w-10 h-10" />
                 {t('home.instructionsTitle')}
               </h2>
               <ol className="space-y-3 text-xl md:text-2xl text-gray-800">
                 <li className="flex items-start gap-3">
-                  <span className="font-bold text-red-600 text-2xl">1.</span>
+                  <span className="font-bold text-blue-600 text-2xl">1.</span>
                   <span>{t('home.instruction1')}</span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <span className="font-bold text-red-600 text-2xl">2.</span>
+                  <span className="font-bold text-blue-600 text-2xl">2.</span>
                   <span>{t('home.instruction2')}</span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <span className="font-bold text-red-600 text-2xl">3.</span>
+                  <span className="font-bold text-blue-600 text-2xl">3.</span>
                   <span>{t('home.instruction3')}</span>
                 </li>
               </ol>
@@ -161,7 +161,7 @@ function HomePage() {
                 type="text"
                 value={fileName}
                 onChange={(e) => setFileName(e.target.value)}
-                className="w-full px-6 py-5 text-2xl md:text-3xl border-4 border-red-300 rounded-xl focus:outline-none focus:ring-4 focus:ring-red-500 focus:border-red-500 transition-all"
+                className="w-full px-6 py-5 text-2xl md:text-3xl border-4 border-blue-300 rounded-xl focus:outline-none focus:ring-4 focus:ring-blue-500 focus:border-blue-500 transition-all"
                 placeholder={t('home.fileNamePlaceholder')}
               />
               <p className="mt-2 text-xl text-gray-600">{t('home.fileNameDescription', {fileName})}</p>
@@ -176,7 +176,7 @@ function HomePage() {
                 value={csvContent}
                 onChange={(e) => setCsvContent(e.target.value)}
                 onPaste={handlePaste}
-                className="w-full h-80 px-6 py-5 text-xl md:text-2xl border-4 border-red-300 rounded-xl focus:outline-none focus:ring-4 focus:ring-red-500 focus:border-red-500 font-mono resize-none transition-all"
+                className="w-full h-80 px-6 py-5 text-xl md:text-2xl border-4 border-blue-300 rounded-xl focus:outline-none focus:ring-4 focus:ring-blue-500 focus:border-blue-500 font-mono resize-none transition-all"
                 placeholder={t('home.csvInputPlaceholder')}
               />
               {csvContent && (
@@ -194,7 +194,7 @@ function HomePage() {
             <div className="flex flex-col md:flex-row gap-4">
               <Button
                 onClick={handleDownload}
-                className="flex-1 bg-red-600 hover:bg-red-700 text-white text-2xl md:text-3xl font-bold py-8 px-8 rounded-xl shadow-lg hover:shadow-xl transition-all transform hover:scale-105 active:scale-95"
+                className="flex-1 bg-blue-600 hover:bg-blue-700 text-white text-2xl md:text-3xl font-bold py-8 px-8 rounded-xl shadow-lg hover:shadow-xl transition-all transform hover:scale-105 active:scale-95"
                 size="lg"
               >
                 <Download className="w-10 h-10 mr-3" strokeWidth={3} />
@@ -204,7 +204,7 @@ function HomePage() {
               <Button
                 onClick={handleClear}
                 variant="outline"
-                className="flex-1 border-4 border-red-600 text-red-600 hover:bg-red-50 text-2xl md:text-3xl font-bold py-8 px-8 rounded-xl shadow-lg hover:shadow-xl transition-all"
+                className="flex-1 border-4 border-blue-600 text-blue-600 hover:bg-blue-50 text-2xl md:text-3xl font-bold py-8 px-8 rounded-xl shadow-lg hover:shadow-xl transition-all"
                 size="lg"
               >
                 {t('home.clearButton')}
@@ -219,7 +219,7 @@ function HomePage() {
             className="mt-16"
           >
             <div className="text-center mb-12">
-              <h2 className="text-4xl md:text-5xl font-black text-red-700">{t('home.toolsSectionTitle')}</h2>
+              <h2 className="text-4xl md:text-5xl font-black text-blue-700">{t('home.toolsSectionTitle')}</h2>
               <p className="text-xl md:text-2xl text-gray-600 mt-4 max-w-3xl mx-auto">{t('home.toolsSectionSubtitle')}</p>
             </div>
             
@@ -240,20 +240,20 @@ function HomePage() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.6 }}
-            className="mt-16 bg-white rounded-3xl shadow-xl border-2 border-red-200 p-8 md:p-12"
+            className="mt-16 bg-white rounded-3xl shadow-xl border-2 border-blue-200 p-8 md:p-12"
           >
-            <h2 className="text-3xl md:text-4xl font-bold text-red-700 mb-6">
+            <h2 className="text-3xl md:text-4xl font-bold text-blue-700 mb-6">
               {t('home.whatIsCsvTitle')}
             </h2>
             <p className="text-xl md:text-2xl text-gray-700 leading-relaxed mb-6">
               {t('home.whatIsCsvText')}
             </p>
-            <div className="bg-red-50 rounded-xl p-6 border-2 border-red-200">
-              <h3 className="text-2xl md:text-3xl font-bold text-red-700 mb-4 flex items-center gap-2">
+            <div className="bg-blue-50 rounded-xl p-6 border-2 border-blue-200">
+              <h3 className="text-2xl md:text-3xl font-bold text-blue-700 mb-4 flex items-center gap-2">
                 <AlertCircle className="w-8 h-8" />
                 {t('home.csvExampleTitle')}
               </h3>
-              <pre className="text-lg md:text-xl font-mono bg-white p-4 rounded-lg border-2 border-red-200 overflow-x-auto">
+              <pre className="text-lg md:text-xl font-mono bg-white p-4 rounded-lg border-2 border-blue-200 overflow-x-auto">
                 {t('home.csvExampleContent')}
               </pre>
             </div>
@@ -263,10 +263,10 @@ function HomePage() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.8 }}
-            className="mt-16 text-center bg-red-50 rounded-3xl p-8 md:p-12 border-2 border-red-200"
+            className="mt-16 text-center bg-blue-50 rounded-3xl p-8 md:p-12 border-2 border-blue-200"
           >
-            <h2 className="text-3xl md:text-4xl font-bold text-red-700 mb-4 flex items-center justify-center gap-3">
-              <Heart className="w-10 h-10 text-red-500" />
+            <h2 className="text-3xl md:text-4xl font-bold text-blue-700 mb-4 flex items-center justify-center gap-3">
+              <Heart className="w-10 h-10 text-blue-500" />
               {t('home.shareTitle')}
             </h2>
             <p className="text-xl md:text-2xl text-gray-700 leading-relaxed mb-8 max-w-2xl mx-auto">
@@ -274,7 +274,7 @@ function HomePage() {
             </p>
             <Button
               onClick={() => setIsShareModalOpen(true)}
-              className="bg-red-600 hover:bg-red-700 text-white text-2xl font-bold py-6 px-10 rounded-xl shadow-lg hover:shadow-xl transition-all transform hover:scale-105 active:scale-95"
+              className="bg-blue-600 hover:bg-blue-700 text-white text-2xl font-bold py-6 px-10 rounded-xl shadow-lg hover:shadow-xl transition-all transform hover:scale-105 active:scale-95"
             >
               <Share2 className="w-8 h-8 mr-3" />
               {t('home.shareButton')}
@@ -283,19 +283,19 @@ function HomePage() {
 
         </main>
 
-        <footer className="bg-red-600 mt-16 py-8">
+        <footer className="bg-blue-600 mt-16 py-8">
           <div className="container mx-auto px-4 text-center">
             <div className="flex justify-center mb-6">
               <LanguageSelector />
             </div>
             <div className="flex justify-center gap-x-6 gap-y-2 flex-wrap mb-6">
-                <Link to="/privacy-policy" className="text-lg text-red-100 hover:text-white font-semibold transition-colors">{t('home.privacyPolicy')}</Link>
-                <Link to="/terms-of-service" className="text-lg text-red-100 hover:text-white font-semibold transition-colors">{t('home.termsOfService')}</Link>
+                <Link to="/privacy-policy" className="text-lg text-blue-100 hover:text-white font-semibold transition-colors">{t('home.privacyPolicy')}</Link>
+                <Link to="/terms-of-service" className="text-lg text-blue-100 hover:text-white font-semibold transition-colors">{t('home.termsOfService')}</Link>
             </div>
             <p className="text-xl md:text-2xl text-white font-semibold">
               {t('home.footerText')}
             </p>
-            <p className="text-lg md:text-xl text-red-100 mt-2">
+            <p className="text-lg md:text-xl text-blue-100 mt-2">
               {t('home.footerRights', { year: new Date().getFullYear() })}
             </p>
           </div>
@@ -311,8 +311,8 @@ const ToolCard = ({ title, icon, tools, langPrefix }) => {
   
   return (
     <div className="bg-white rounded-2xl shadow-lg border border-gray-200 overflow-hidden h-full flex flex-col">
-      <div className="p-6 bg-red-50 border-b-2 border-red-200">
-        <h3 className="text-2xl font-bold text-red-700 flex items-center gap-3">
+      <div className="p-6 bg-blue-50 border-b-2 border-blue-200">
+        <h3 className="text-2xl font-bold text-blue-700 flex items-center gap-3">
           {React.cloneElement(icon, { className: "w-8 h-8" })}
           {title}
         </h3>
@@ -323,10 +323,10 @@ const ToolCard = ({ title, icon, tools, langPrefix }) => {
             <li key={toolKey}>
               <Link 
                 to={`${langPrefix}/${t(`tools.${toolKey}.slug`)}`} 
-                className="flex items-center justify-between p-3 text-lg text-gray-800 rounded-lg hover:bg-red-100 hover:text-red-700 font-semibold transition-colors duration-200 group"
+                className="flex items-center justify-between p-3 text-lg text-gray-800 rounded-lg hover:bg-blue-100 hover:text-blue-700 font-semibold transition-colors duration-200 group"
               >
                 <span>{t(`tools.${toolKey}.title`)}</span>
-                <ChevronRight className="w-6 h-6 text-red-400 group-hover:text-red-600 transition-transform duration-200 group-hover:translate-x-1" />
+                <ChevronRight className="w-6 h-6 text-blue-400 group-hover:text-blue-600 transition-transform duration-200 group-hover:translate-x-1" />
               </Link>
             </li>
           ))}

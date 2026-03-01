@@ -114,7 +114,7 @@ const CsvToMarkdownTool = () => {
         <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            className="bg-white rounded-3xl shadow-2xl border-4 border-red-600 p-8 md:p-12"
+            className="bg-white rounded-3xl shadow-2xl border-4 border-blue-600 p-8 md:p-12"
         >
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                 <div>
@@ -127,7 +127,7 @@ const CsvToMarkdownTool = () => {
                         value={csvContent}
                         onChange={(e) => setCsvContent(e.target.value)}
                         onPaste={handlePaste}
-                        className="w-full h-96 px-6 py-5 text-lg border-4 border-red-300 rounded-xl focus:outline-none focus:ring-4 focus:ring-red-500 focus:border-red-500 font-mono resize-y transition-all"
+                        className="w-full h-96 px-6 py-5 text-lg border-4 border-blue-300 rounded-xl focus:outline-none focus:ring-4 focus:ring-blue-500 focus:border-blue-500 font-mono resize-y transition-all"
                         placeholder="columna1,columna2,columna3&#10;valor1,valor2,valor3"
                     />
                 </div>
@@ -142,7 +142,7 @@ const CsvToMarkdownTool = () => {
                             size="sm"
                             onClick={copyToClipboard}
                             disabled={!markdownContent}
-                            className="flex items-center gap-2 text-red-600 border-red-500 hover:bg-red-50"
+                            className="flex items-center gap-2 text-blue-600 border-blue-500 hover:bg-blue-50"
                         >
                             <Copy className="w-4 h-4" />
                             Copiar
@@ -160,7 +160,7 @@ const CsvToMarkdownTool = () => {
 
             <Button
                 onClick={convertToMarkdown}
-                className="w-full mt-8 bg-red-600 hover:bg-red-700 text-white text-2xl md:text-3xl font-bold py-8 px-8 rounded-xl shadow-lg hover:shadow-xl transition-all transform hover:scale-105"
+                className="w-full mt-8 bg-blue-600 hover:bg-blue-700 text-white text-2xl md:text-3xl font-bold py-8 px-8 rounded-xl shadow-lg hover:shadow-xl transition-all transform hover:scale-105"
             >
                 <Table className="w-10 h-10 mr-3" strokeWidth={3} />
                 CONVERTIR A MARKDOWN

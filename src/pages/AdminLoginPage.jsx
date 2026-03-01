@@ -41,13 +41,13 @@ const AdminLoginPage = () => {
       </Helmet>
       <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-gray-900 to-gray-800 p-4">
         <motion.div
-          className="w-full max-w-md bg-white rounded-2xl shadow-2xl p-8 md:p-10 border-4 border-red-500"
+          className="w-full max-w-md bg-white rounded-2xl shadow-2xl p-8 md:p-10 border-4 border-blue-500"
           initial={{ opacity: 0, y: -20, scale: 0.95 }}
           animate={{ opacity: 1, y: 0, scale: 1 }}
           transition={{ duration: 0.5 }}
         >
           <div className="text-center mb-8">
-            <Lock className="w-16 h-16 mx-auto text-red-600 mb-4" />
+            <Lock className="w-16 h-16 mx-auto text-blue-600 mb-4" />
             <h1 className="text-3xl md:text-4xl font-black text-gray-800">Acceso de Administrador</h1>
             <p className="text-gray-600 mt-2 text-lg">Introduce la contraseña para continuar.</p>
           </div>
@@ -62,13 +62,13 @@ const AdminLoginPage = () => {
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
                 placeholder="Contraseña"
-                className="w-full px-5 py-4 text-xl border-2 border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-red-500 transition"
+                className="w-full px-5 py-4 text-xl border-2 border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition"
                 required
               />
             </div>
             <Button
               type="submit"
-              className="w-full bg-red-600 hover:bg-red-700 text-white text-xl font-bold py-4 px-6 rounded-lg shadow-lg hover:shadow-xl transition-all transform hover:scale-105"
+              className="w-full bg-blue-600 hover:bg-blue-700 text-white text-xl font-bold py-4 px-6 rounded-lg shadow-lg hover:shadow-xl transition-all transform hover:scale-105"
               size="lg"
             >
               <LogIn className="w-6 h-6 mr-2" />

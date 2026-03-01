@@ -107,13 +107,13 @@ const WebToTextTool = () => {
                         value={url}
                         onChange={(e) => setUrl(e.target.value)}
                         placeholder={t('webToText.placeholder')}
-                        className="flex-grow p-4 text-lg border-2 border-gray-300 rounded-lg focus:ring-red-500 focus:border-red-500"
+                        className="flex-grow p-4 text-lg border-2 border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500"
                         disabled={isLoading}
                     />
                     <Button 
                         onClick={handleExtract} 
                         disabled={isLoading}
-                        className="bg-red-600 hover:bg-red-700 text-white font-bold py-4 px-6 rounded-lg text-lg"
+                        className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-4 px-6 rounded-lg text-lg"
                     >
                         {isLoading ? (
                             <Loader2 className="w-6 h-6 animate-spin" />
@@ -134,7 +134,7 @@ const WebToTextTool = () => {
                     >
                         <div className="flex justify-between items-center">
                             <h3 className="text-xl font-semibold text-gray-800 flex items-center gap-2">
-                               <FileText className="w-6 h-6 text-red-600" />
+                               <FileText className="w-6 h-6 text-blue-600" />
                                {t('webToText.resultLabel')}
                             </h3>
                             <div className="text-md font-medium text-gray-600 bg-gray-100 rounded-full px-3 py-1">
@@ -167,15 +167,15 @@ const WebToTextTool = () => {
                      <motion.div
                         initial={{ opacity: 0, scale: 0.9 }}
                         animate={{ opacity: 1, scale: 1 }}
-                        className="text-center py-10 px-6 bg-red-50 border-2 border-dashed border-red-200 rounded-xl"
+                        className="text-center py-10 px-6 bg-blue-50 border-2 border-dashed border-blue-200 rounded-xl"
                     >
                         <div className="flex justify-center mb-4">
-                            <div className="bg-red-100 p-4 rounded-full">
-                               <Link className="w-12 h-12 text-red-500" />
+                            <div className="bg-blue-100 p-4 rounded-full">
+                               <Link className="w-12 h-12 text-blue-500" />
                             </div>
                         </div>
-                        <h4 className="text-2xl font-bold text-red-700">{t('webToText.initialStateTitle')}</h4>
-                        <p className="text-lg text-red-600 mt-2">{t('webToText.initialStateDescription')}</p>
+                        <h4 className="text-2xl font-bold text-blue-700">{t('webToText.initialStateTitle')}</h4>
+                        <p className="text-lg text-blue-600 mt-2">{t('webToText.initialStateDescription')}</p>
                     </motion.div>
                 )}
             </AnimatePresence>

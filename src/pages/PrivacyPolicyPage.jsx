@@ -12,22 +12,22 @@ const PrivacyPolicyPage = () => {
                 <meta name="robots" content="noindex, follow" />
             </Helmet>
             <div className="min-h-screen bg-gray-50">
-                <header className="bg-red-600 shadow-md">
+                <header className="bg-blue-600 shadow-md">
                     <div className="container mx-auto px-4 py-4">
                         <nav className="flex items-center text-white text-lg" aria-label="Breadcrumb">
-                            <Link to="/" className="flex items-center gap-2 hover:text-red-200 transition-colors">
+                            <Link to="/" className="flex items-center gap-2 hover:text-blue-200 transition-colors">
                                 <Home className="w-5 h-5" />
                                 <span>Inicio</span>
                             </Link>
-                            <ChevronsRight className="w-6 h-6 mx-1 text-red-300" />
-                            <span className="font-semibold text-red-100">Política de Privacidad</span>
+                            <ChevronsRight className="w-6 h-6 mx-1 text-blue-300" />
+                            <span className="font-semibold text-blue-100">Política de Privacidad</span>
                         </nav>
                     </div>
                 </header>
 
                 <main className="container mx-auto px-4 py-12 max-w-4xl">
                     <div className="bg-white rounded-xl shadow-lg p-8 md:p-12">
-                        <h1 className="text-3xl md:text-5xl font-bold text-red-700 mb-6 flex items-center gap-3">
+                        <h1 className="text-3xl md:text-5xl font-bold text-blue-700 mb-6 flex items-center gap-3">
                             <Shield className="w-10 h-10" />
                             Política de Privacidad
                         </h1>

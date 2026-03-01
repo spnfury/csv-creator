@@ -92,7 +92,7 @@ const SplitCsvTool = () => {
         <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            className="bg-white rounded-3xl shadow-2xl border-4 border-red-600 p-8 md:p-12"
+            className="bg-white rounded-3xl shadow-2xl border-4 border-blue-600 p-8 md:p-12"
         >
             <div className="mb-8">
                 <label htmlFor="csvInput" className="block text-2xl md:text-3xl font-bold text-gray-800 mb-3 flex items-center gap-2">
@@ -104,7 +104,7 @@ const SplitCsvTool = () => {
                     value={csvContent}
                     onChange={(e) => setCsvContent(e.target.value)}
                     onPaste={handlePaste}
-                    className="w-full h-60 px-6 py-5 text-xl border-4 border-red-300 rounded-xl focus:outline-none focus:ring-4 focus:ring-red-500 focus:border-red-500 font-mono resize-y transition-all"
+                    className="w-full h-60 px-6 py-5 text-xl border-4 border-blue-300 rounded-xl focus:outline-none focus:ring-4 focus:ring-blue-500 focus:border-blue-500 font-mono resize-y transition-all"
                     placeholder="Pega tu contenido CSV aquí...&#10;La primera línea se considerará la cabecera."
                 />
             </div>
@@ -119,7 +119,7 @@ const SplitCsvTool = () => {
                         type="number"
                         value={rowsPerFile}
                         onChange={(e) => setRowsPerFile(parseInt(e.target.value, 10))}
-                        className="w-full px-4 py-3 text-xl border-2 border-red-300 rounded-lg"
+                        className="w-full px-4 py-3 text-xl border-2 border-blue-300 rounded-lg"
                         min="1"
                     />
                 </div>
@@ -132,14 +132,14 @@ const SplitCsvTool = () => {
                         type="text"
                         value={fileNamePrefix}
                         onChange={(e) => setFileNamePrefix(e.target.value)}
-                        className="w-full px-4 py-3 text-xl border-2 border-red-300 rounded-lg"
+                        className="w-full px-4 py-3 text-xl border-2 border-blue-300 rounded-lg"
                     />
                 </div>
             </div>
 
             <Button
                 onClick={handleSplit}
-                className="w-full bg-red-600 hover:bg-red-700 text-white text-2xl md:text-3xl font-bold py-8 px-8 rounded-xl shadow-lg hover:shadow-xl transition-all transform hover:scale-105"
+                className="w-full bg-blue-600 hover:bg-blue-700 text-white text-2xl md:text-3xl font-bold py-8 px-8 rounded-xl shadow-lg hover:shadow-xl transition-all transform hover:scale-105"
             >
                 <Scissors className="w-10 h-10 mr-3" strokeWidth={3} />
                 DIVIDIR ARCHIVO
@@ -151,15 +151,15 @@ const SplitCsvTool = () => {
                     animate={{ opacity: 1, y: 0 }}
                     className="mt-12"
                 >
-                    <h3 className="text-3xl font-bold text-red-700 mb-6">Archivos Resultantes</h3>
-                    <div className="bg-red-50 rounded-xl p-6 border-2 border-red-200">
+                    <h3 className="text-3xl font-bold text-blue-700 mb-6">Archivos Resultantes</h3>
+                    <div className="bg-blue-50 rounded-xl p-6 border-2 border-blue-200">
                         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
                             {splitFiles.map((fileContent, index) => (
                                 <Button
                                     key={index}
                                     onClick={() => downloadFile(fileContent, index)}
                                     variant="outline"
-                                    className="flex items-center justify-center gap-2 text-lg py-4 border-2 border-red-500 text-red-600 hover:bg-red-100"
+                                    className="flex items-center justify-center gap-2 text-lg py-4 border-2 border-blue-500 text-blue-600 hover:bg-blue-100"
                                 >
                                     <Download className="w-5 h-5" />
                                     <span>{`${fileNamePrefix}${index + 1}.csv`}</span>

@@ -124,7 +124,7 @@ const CsvToMultiLineTool = () => {
         <div className="space-y-4">
           <div>
             <label htmlFor="csv-input" className="text-lg font-semibold text-gray-700 flex items-center">
-              <FileText className="w-5 h-5 mr-2 text-red-500" />
+              <FileText className="w-5 h-5 mr-2 text-blue-500" />
               {t('csvToMultiLine.csvInputLabel')}
             </label>
             <Textarea
@@ -132,12 +132,12 @@ const CsvToMultiLineTool = () => {
               value={csvContent}
               onChange={(e) => setCsvContent(e.target.value)}
               placeholder={t('csvToMultiLine.placeholder')}
-              className="min-h-[200px] text-base border-gray-300 focus:ring-red-500 focus:border-red-500 font-mono"
+              className="min-h-[200px] text-base border-gray-300 focus:ring-blue-500 focus:border-blue-500 font-mono"
             />
           </div>
           <div>
             <label htmlFor="template-input" className="text-lg font-semibold text-gray-700 flex items-center">
-              <WrapText className="w-5 h-5 mr-2 text-red-500" />
+              <WrapText className="w-5 h-5 mr-2 text-blue-500" />
               {t('csvToMultiLine.templateLabel')}
             </label>
             <Textarea
@@ -145,26 +145,26 @@ const CsvToMultiLineTool = () => {
               value={template}
               onChange={(e) => setTemplate(e.target.value)}
               placeholder={t('csvToMultiLine.templatePlaceholder')}
-              className="h-[120px] text-base border-gray-300 focus:ring-red-500 focus:border-red-500 font-mono"
+              className="h-[120px] text-base border-gray-300 focus:ring-blue-500 focus:border-blue-500 font-mono"
             />
           </div>
         </div>
         <div className="space-y-2">
           <label htmlFor="result-output" className="text-lg font-semibold text-gray-700 flex items-center">
-            <WrapText className="w-5 h-5 mr-2 text-red-500" />
+            <WrapText className="w-5 h-5 mr-2 text-blue-500" />
             {t('csvToMultiLine.resultLabel')}
           </label>
           <Textarea
             id="result-output"
             value={result}
             readOnly
-            className="min-h-[360px] text-base bg-gray-50 border-gray-300 focus:ring-red-500 focus:border-red-500 font-mono"
+            className="min-h-[360px] text-base bg-gray-50 border-gray-300 focus:ring-blue-500 focus:border-blue-500 font-mono"
           />
         </div>
       </div>
       
       <div className="flex flex-wrap gap-4">
-        <Button onClick={handleConvert} className="bg-red-600 hover:bg-red-700 text-white font-bold text-lg py-6 flex-grow">
+        <Button onClick={handleConvert} className="bg-blue-600 hover:bg-blue-700 text-white font-bold text-lg py-6 flex-grow">
           <Wand2 className="w-6 h-6 mr-2" />
           {t('csvToMultiLine.convertButton')}
         </Button>

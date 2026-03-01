@@ -150,7 +150,7 @@ function ToolPage() {
   };
 
   const UnderConstruction = () => (
-      <div className="bg-white rounded-3xl shadow-2xl border-4 border-red-600 p-8 md:p-12 text-center">
+      <div className="bg-white rounded-3xl shadow-2xl border-4 border-blue-600 p-8 md:p-12 text-center">
           <h3 className="text-3xl font-bold text-gray-800 mb-4">{t('toolpage.underConstructionTitle')}</h3>
           <p className="text-2xl text-gray-600 mb-8">
               {t('toolpage.underConstructionText')}
@@ -158,7 +158,7 @@ function ToolPage() {
           <img className="w-1/2 mx-auto" alt="Un simpático robot constructor con un casco de obra y herramientas" src="https://images.unsplash.com/photo-1697564265236-1679374e6e32" />
           <Link to={langPrefix || '/'}>
               <Button
-                  className="mt-8 bg-red-600 hover:bg-red-700 text-white text-2xl font-bold py-6 px-10 rounded-xl shadow-lg hover:shadow-xl transition-all"
+                  className="mt-8 bg-blue-600 hover:bg-blue-700 text-white text-2xl font-bold py-6 px-10 rounded-xl shadow-lg hover:shadow-xl transition-all"
                   size="lg"
               >
                   <Home className="w-8 h-8 mr-3" />
@@ -185,16 +185,16 @@ function ToolPage() {
         toolTitle={toolTitle}
         toolUrl={window.location.href}
       />
-      <div className="min-h-screen bg-gradient-to-br from-white via-red-50 to-white">
-        <header className="bg-red-600 shadow-lg">
+      <div className="min-h-screen bg-gradient-to-br from-white via-blue-50 to-white">
+        <header className="bg-blue-600 shadow-lg">
           <div className="container mx-auto px-4 py-6">
              <nav className="flex items-center text-white text-xl" aria-label="Breadcrumb">
-              <Link to={langPrefix || '/'} className="flex items-center gap-2 hover:text-red-200 transition-colors">
+              <Link to={langPrefix || '/'} className="flex items-center gap-2 hover:text-blue-200 transition-colors">
                 <Home className="w-6 h-6" />
                 <span>{t('toolpage.breadcrumbHome')}</span>
               </Link>
-              <ChevronsRight className="w-8 h-8 mx-2 text-red-300" />
-              <span className="font-semibold text-red-100">{toolTitle}</span>
+              <ChevronsRight className="w-8 h-8 mx-2 text-blue-300" />
+              <span className="font-semibold text-blue-100">{toolTitle}</span>
             </nav>
           </div>
         </header>
@@ -205,7 +205,7 @@ function ToolPage() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
           >
-            <h1 className="text-4xl md:text-6xl font-black text-red-700 tracking-tight mb-4">{toolTitle}</h1>
+            <h1 className="text-4xl md:text-6xl font-black text-blue-700 tracking-tight mb-4">{toolTitle}</h1>
             <h2 className="text-2xl md:text-3xl text-gray-700 font-semibold mb-12">{toolDescription}</h2>
 
             <ToolComponent />
@@ -213,39 +213,39 @@ function ToolPage() {
           </motion.div>
         </main>
 
-        <footer className="bg-red-700 mt-16 py-12 text-white">
+        <footer className="bg-blue-700 mt-16 py-12 text-white">
             <div className="container mx-auto px-4">
                 <div className="flex flex-col md:flex-row justify-center items-center gap-6 mb-10">
-                     <Button onClick={() => setIsShareModalOpen(true)} className="bg-white text-red-600 font-bold text-lg py-5 px-8 rounded-lg hover:bg-red-100 transition-all shadow-md">
+                     <Button onClick={() => setIsShareModalOpen(true)} className="bg-white text-blue-600 font-bold text-lg py-5 px-8 rounded-lg hover:bg-blue-100 transition-all shadow-md">
                         <Share2 className="w-6 h-6 mr-3" />
                         {t('toolpage.shareWithFriends')}
                     </Button>
-                     <Button onClick={handleBookmark} className="bg-white text-red-600 font-bold text-lg py-5 px-8 rounded-lg hover:bg-red-100 transition-all shadow-md">
+                     <Button onClick={handleBookmark} className="bg-white text-blue-600 font-bold text-lg py-5 px-8 rounded-lg hover:bg-blue-100 transition-all shadow-md">
                         <Star className="w-6 h-6 mr-3" />
                         {t('toolpage.addToFavorites')}
                     </Button>
                 </div>
-                <h3 className="text-3xl font-bold text-center mb-8 border-t border-red-500 pt-10">{t('toolpage.otherToolsTitle')}</h3>
+                <h3 className="text-3xl font-bold text-center mb-8 border-t border-blue-500 pt-10">{t('toolpage.otherToolsTitle')}</h3>
                 <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-6 gap-y-4">
                     {toolKeys.map((toolKeyItem) => (
                         <Link 
                             key={toolKeyItem} 
                             to={`${langPrefix}/${t(`tools.${toolKeyItem}.slug`)}`} 
-                            className="flex items-center gap-3 p-2 rounded-lg hover:bg-red-600 transition-colors"
+                            className="flex items-center gap-3 p-2 rounded-lg hover:bg-blue-600 transition-colors"
                         >
-                            <Wrench className="w-5 h-5 text-red-200 flex-shrink-0" />
-                            <span className="text-red-50 font-medium">{t(`tools.${toolKeyItem}.title`)}</span>
+                            <Wrench className="w-5 h-5 text-blue-200 flex-shrink-0" />
+                            <span className="text-blue-50 font-medium">{t(`tools.${toolKeyItem}.title`)}</span>
                         </Link>
                     ))}
                 </div>
-                <div className="border-t border-red-500 mt-12 pt-8 text-center">
+                <div className="border-t border-blue-500 mt-12 pt-8 text-center">
                     <div className="flex justify-center mb-6">
                         <LanguageSelector />
                     </div>
-                    <p className="text-lg text-red-100 font-semibold">
+                    <p className="text-lg text-blue-100 font-semibold">
                       {t('home.footerText')}
                     </p>
-                    <p className="text-base text-red-200 mt-2">
+                    <p className="text-base text-blue-200 mt-2">
                       {t('home.footerRights', { year: new Date().getFullYear() })}
                     </p>
                 </div>

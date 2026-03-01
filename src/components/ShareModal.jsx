@@ -48,9 +48,9 @@ const ShareModal = ({ isOpen, setIsOpen, toolTitle, toolUrl }) => {
 
   return (
     <Dialog open={isOpen} onOpenChange={setIsOpen}>
-      <DialogContent className="sm:max-w-[425px] bg-white rounded-2xl border-4 border-red-500 shadow-2xl">
+      <DialogContent className="sm:max-w-[425px] bg-white rounded-2xl border-4 border-blue-500 shadow-2xl">
         <DialogHeader>
-          <DialogTitle className="text-2xl font-bold text-red-700">{t('shareModal.title')}</DialogTitle>
+          <DialogTitle className="text-2xl font-bold text-blue-700">{t('shareModal.title')}</DialogTitle>
           <DialogDescription>
             {t('shareModal.description', { toolTitle })}
           </DialogDescription>
@@ -72,7 +72,7 @@ const ShareModal = ({ isOpen, setIsOpen, toolTitle, toolUrl }) => {
           </div>
           <div className="relative flex items-center mt-4">
             <Input id="link" defaultValue={toolUrl} readOnly className="pr-12 h-12 text-base" />
-            <Button type="button" size="icon" className="absolute right-2 h-9 w-9 bg-red-600 hover:bg-red-700" onClick={copyToClipboard}>
+            <Button type="button" size="icon" className="absolute right-2 h-9 w-9 bg-blue-600 hover:bg-blue-700" onClick={copyToClipboard}>
               <Copy className="h-5 w-5" />
             </Button>
           </div>

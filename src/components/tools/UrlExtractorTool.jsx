@@ -78,7 +78,7 @@ const UrlExtractorTool = () => {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         <div className="space-y-2">
           <label htmlFor="text-input" className="text-lg font-semibold text-gray-700 flex items-center">
-            <Link className="w-5 h-5 mr-2 text-red-500" />
+            <Link className="w-5 h-5 mr-2 text-blue-500" />
             {t('urlExtractor.pasteTextLabel')}
           </label>
           <Textarea
@@ -86,12 +86,12 @@ const UrlExtractorTool = () => {
             value={text}
             onChange={(e) => setText(e.target.value)}
             placeholder={t('urlExtractor.placeholder')}
-            className="min-h-[300px] text-base border-gray-300 focus:ring-red-500 focus:border-red-500 font-mono"
+            className="min-h-[300px] text-base border-gray-300 focus:ring-blue-500 focus:border-blue-500 font-mono"
           />
         </div>
         <div className="space-y-2">
           <label className="text-lg font-semibold text-gray-700 flex items-center">
-            <List className="w-5 h-5 mr-2 text-red-500" />
+            <List className="w-5 h-5 mr-2 text-blue-500" />
             {t('urlExtractor.foundTitle', { count: urls.length })}
           </label>
           <div className="min-h-[300px] bg-gray-50 border rounded-md p-4 overflow-y-auto">
@@ -111,7 +111,7 @@ const UrlExtractorTool = () => {
       </div>
       
       <div className="flex flex-wrap gap-4">
-        <Button onClick={handleExtract} className="bg-red-600 hover:bg-red-700 text-white font-bold text-lg py-6 flex-grow">
+        <Button onClick={handleExtract} className="bg-blue-600 hover:bg-blue-700 text-white font-bold text-lg py-6 flex-grow">
           <Wand2 className="w-6 h-6 mr-2" />
           {t('urlExtractor.extractButton')}
         </Button>

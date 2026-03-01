@@ -61,7 +61,7 @@ const AdminDashboardPage = () => {
                 <p className="text-gray-600 mb-4">
                   El fichero sitemap.xml se genera automáticamente cada vez que publicas una nueva versión de tu sitio. Si has añadido nuevas herramientas o has hecho cambios importantes, puedes solicitar una regeneración.
                 </p>
-                <Button onClick={handleGenerateSitemap} className="bg-red-600 hover:bg-red-700">
+                <Button onClick={handleGenerateSitemap} className="bg-blue-600 hover:bg-blue-700">
                   <RefreshCw className="w-5 h-5 mr-2" />
                   Regenerar Sitemap en el próximo despliegue
                 </Button>

@@ -141,7 +141,7 @@ function YamlToCsvTool() {
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.5 }}
-            className="bg-white rounded-3xl shadow-2xl border-4 border-red-600 p-8 md:p-12"
+            className="bg-white rounded-3xl shadow-2xl border-4 border-blue-600 p-8 md:p-12"
         >
             <div className="mb-8">
                 <label htmlFor="fileName" className="block text-2xl font-bold text-gray-800 mb-3">
@@ -152,10 +152,10 @@ function YamlToCsvTool() {
                     type="text"
                     value={fileName}
                     onChange={(e) => setFileName(e.target.value)}
-                    className="w-full md:w-1/2 px-6 py-5 text-2xl border-4 border-red-300 rounded-xl focus:outline-none focus:ring-4 focus:ring-red-500 focus:border-red-500 transition-all"
+                    className="w-full md:w-1/2 px-6 py-5 text-2xl border-4 border-blue-300 rounded-xl focus:outline-none focus:ring-4 focus:ring-blue-500 focus:border-blue-500 transition-all"
                     placeholder="nombre-archivo"
                 />
-                <p className="mt-2 text-xl text-gray-600">Se guardará como: <span className="font-bold text-red-600">{fileName}.csv</span></p>
+                <p className="mt-2 text-xl text-gray-600">Se guardará como: <span className="font-bold text-blue-600">{fileName}.csv</span></p>
             </div>
 
             <div className="mb-8">
@@ -167,7 +167,7 @@ function YamlToCsvTool() {
                     id="yamlInput"
                     value={yamlContent}
                     onChange={(e) => setYamlContent(e.target.value)}
-                    className="w-full h-80 px-6 py-5 text-xl md:text-2xl border-4 border-red-300 rounded-xl focus:outline-none focus:ring-4 focus:ring-red-500 focus:border-red-500 font-mono resize-none transition-all"
+                    className="w-full h-80 px-6 py-5 text-xl md:text-2xl border-4 border-blue-300 rounded-xl focus:outline-none focus:ring-4 focus:ring-blue-500 focus:border-blue-500 font-mono resize-none transition-all"
                     placeholder="Pega tu YAML aquí (debe ser una lista de objetos)..."
                 />
             </div>
@@ -175,7 +175,7 @@ function YamlToCsvTool() {
             <div className="flex flex-col md:flex-row gap-4 mb-8">
                 <Button
                     onClick={handleDownload}
-                    className="flex-1 bg-red-600 hover:bg-red-700 text-white text-2xl md:text-3xl font-bold py-8 px-8 rounded-xl shadow-lg hover:shadow-xl transition-all transform hover:scale-105"
+                    className="flex-1 bg-blue-600 hover:bg-blue-700 text-white text-2xl md:text-3xl font-bold py-8 px-8 rounded-xl shadow-lg hover:shadow-xl transition-all transform hover:scale-105"
                 >
                     <Download className="w-10 h-10 mr-3" strokeWidth={3} />
                     CONVERTIR Y DESCARGAR CSV
@@ -183,19 +183,19 @@ function YamlToCsvTool() {
                 <Button
                     onClick={handleClear}
                     variant="outline"
-                    className="flex-1 border-4 border-red-600 text-red-600 hover:bg-red-50 text-2xl md:text-3xl font-bold py-8 px-8 rounded-xl shadow-lg hover:shadow-xl transition-all"
+                    className="flex-1 border-4 border-blue-600 text-blue-600 hover:bg-blue-50 text-2xl md:text-3xl font-bold py-8 px-8 rounded-xl shadow-lg hover:shadow-xl transition-all"
                 >
                     <Trash2 className="w-8 h-8 mr-3" />
                     LIMPIAR
                 </Button>
             </div>
             
-            <div className="bg-red-50 rounded-xl p-6 border-2 border-red-200">
-                <h3 className="text-2xl font-bold text-red-700 mb-4 flex items-center gap-2">
+            <div className="bg-blue-50 rounded-xl p-6 border-2 border-blue-200">
+                <h3 className="text-2xl font-bold text-blue-700 mb-4 flex items-center gap-2">
                     <AlertCircle className="w-8 h-8" />
                     Ejemplo de YAML (Lista de Objetos):
                 </h3>
-                <pre className="text-lg font-mono bg-white p-4 rounded-lg border-2 border-red-200 overflow-x-auto">
+                <pre className="text-lg font-mono bg-white p-4 rounded-lg border-2 border-blue-200 overflow-x-auto">
                     {exampleYAML}
                 </pre>
                  <p className="mt-4 text-lg text-gray-700">Esta herramienta convierte una lista de objetos YAML a CSV. Estructuras más complejas pueden no ser soportadas.</p>

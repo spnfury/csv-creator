@@ -48,7 +48,7 @@ const CsvToPdfTool = () => {
           fontSize: fontSize,
         },
         headStyles: {
-            fillColor: [239, 68, 68] // red-500
+            fillColor: [239, 68, 68] // blue-500
         },
       });
 
@@ -89,7 +89,7 @@ const CsvToPdfTool = () => {
     >
       <div className="space-y-2">
         <label htmlFor="csv-input" className="text-lg font-semibold text-gray-700 flex items-center">
-          <FileText className="w-5 h-5 mr-2 text-red-500" />
+          <FileText className="w-5 h-5 mr-2 text-blue-500" />
           {t('csvToPdf.csvInputLabel')}
         </label>
         <Textarea
@@ -97,19 +97,19 @@ const CsvToPdfTool = () => {
           value={csvContent}
           onChange={(e) => setCsvContent(e.target.value)}
           placeholder={t('csvToPdf.placeholder')}
-          className="min-h-[200px] text-base border-gray-300 focus:ring-red-500 focus:border-red-500"
+          className="min-h-[200px] text-base border-gray-300 focus:ring-blue-500 focus:border-blue-500"
           rows={10}
         />
       </div>
       
-      <div className="bg-red-50 rounded-lg p-4 space-y-4 border border-red-200">
-        <h3 className="text-lg font-semibold text-gray-700 flex items-center"><SlidersHorizontal className="w-5 h-5 mr-2 text-red-500" />{t('csvToPdf.optionsTitle')}</h3>
+      <div className="bg-blue-50 rounded-lg p-4 space-y-4 border border-blue-200">
+        <h3 className="text-lg font-semibold text-gray-700 flex items-center"><SlidersHorizontal className="w-5 h-5 mr-2 text-blue-500" />{t('csvToPdf.optionsTitle')}</h3>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <div className="space-y-2">
                 <label htmlFor="orientation" className="font-medium text-gray-600 flex items-center"><ArrowRightLeft className="w-4 h-4 mr-2" />{t('csvToPdf.orientationLabel')}</label>
                 <div className="flex gap-2">
-                    <Button variant={orientation === 'portrait' ? 'solid' : 'outline'} onClick={() => setOrientation('portrait')} className={`flex-1 ${orientation === 'portrait' ? 'bg-red-500 text-white' : 'text-gray-700'}`}>{t('csvToPdf.orientationPortrait')}</Button>
-                    <Button variant={orientation === 'landscape' ? 'solid' : 'outline'} onClick={() => setOrientation('landscape')} className={`flex-1 ${orientation === 'landscape' ? 'bg-red-500 text-white' : 'text-gray-700'}`}>{t('csvToPdf.orientationLandscape')}</Button>
+                    <Button variant={orientation === 'portrait' ? 'solid' : 'outline'} onClick={() => setOrientation('portrait')} className={`flex-1 ${orientation === 'portrait' ? 'bg-blue-500 text-white' : 'text-gray-700'}`}>{t('csvToPdf.orientationPortrait')}</Button>
+                    <Button variant={orientation === 'landscape' ? 'solid' : 'outline'} onClick={() => setOrientation('landscape')} className={`flex-1 ${orientation === 'landscape' ? 'bg-blue-500 text-white' : 'text-gray-700'}`}>{t('csvToPdf.orientationLandscape')}</Button>
                 </div>
             </div>
             <div className="space-y-2">
@@ -119,7 +119,7 @@ const CsvToPdfTool = () => {
                     type="number"
                     value={fontSize}
                     onChange={(e) => setFontSize(parseInt(e.target.value, 10))}
-                    className="text-base border-gray-300 focus:ring-red-500 focus:border-red-500"
+                    className="text-base border-gray-300 focus:ring-blue-500 focus:border-blue-500"
                     min="5"
                     max="20"
                 />
@@ -129,7 +129,7 @@ const CsvToPdfTool = () => {
 
       <div className="space-y-2">
         <label htmlFor="file-name" className="text-lg font-semibold text-gray-700 flex items-center">
-          <FileDown className="w-5 h-5 mr-2 text-red-500" />
+          <FileDown className="w-5 h-5 mr-2 text-blue-500" />
           {t('csvToPdf.fileNameLabel')}
         </label>
         <Input
@@ -137,12 +137,12 @@ const CsvToPdfTool = () => {
           value={fileName}
           onChange={(e) => setFileName(e.target.value)}
           placeholder={t('csvToPdf.fileNamePlaceholder')}
-          className="text-base border-gray-300 focus:ring-red-500 focus:border-red-500"
+          className="text-base border-gray-300 focus:ring-blue-500 focus:border-blue-500"
         />
       </div>
       
       <div className="flex flex-col sm:flex-row gap-4">
-        <Button onClick={handleConvert} className="w-full bg-red-600 hover:bg-red-700 text-white font-bold text-lg py-6 flex-grow">
+        <Button onClick={handleConvert} className="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold text-lg py-6 flex-grow">
           <Wand2 className="w-6 h-6 mr-2" />
           {t('csvToPdf.convertButton')}
         </Button>

@@ -97,7 +97,7 @@ const XmlToCsvTool = () => {
     >
       <div className="space-y-2">
         <label htmlFor="xml-input" className="text-lg font-semibold text-gray-700 flex items-center">
-          <FileCode className="w-5 h-5 mr-2 text-red-500" />
+          <FileCode className="w-5 h-5 mr-2 text-blue-500" />
           {t('xmlToCsv.xmlInputLabel')}
         </label>
         <Textarea
@@ -105,14 +105,14 @@ const XmlToCsvTool = () => {
           value={xmlContent}
           onChange={(e) => setXmlContent(e.target.value)}
           placeholder={t('xmlToCsv.placeholder')}
-          className="min-h-[250px] text-base border-gray-300 focus:ring-red-500 focus:border-red-500 font-mono"
+          className="min-h-[250px] text-base border-gray-300 focus:ring-blue-500 focus:border-blue-500 font-mono"
           rows={12}
         />
       </div>
       
       <div className="space-y-2">
         <label htmlFor="file-name" className="text-lg font-semibold text-gray-700 flex items-center">
-          <FileDown className="w-5 h-5 mr-2 text-red-500" />
+          <FileDown className="w-5 h-5 mr-2 text-blue-500" />
           {t('xmlToCsv.fileNameLabel')}
         </label>
         <Input
@@ -120,12 +120,12 @@ const XmlToCsvTool = () => {
           value={fileName}
           onChange={(e) => setFileName(e.target.value)}
           placeholder={t('xmlToCsv.fileNamePlaceholder')}
-          className="text-base border-gray-300 focus:ring-red-500 focus:border-red-500"
+          className="text-base border-gray-300 focus:ring-blue-500 focus:border-blue-500"
         />
       </div>
       
       <div className="flex flex-col sm:flex-row gap-4">
-        <Button onClick={handleConvert} className="w-full bg-red-600 hover:bg-red-700 text-white font-bold text-lg py-6 flex-grow">
+        <Button onClick={handleConvert} className="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold text-lg py-6 flex-grow">
           <Wand2 className="w-6 h-6 mr-2" />
           {t('xmlToCsv.convertButton')}
         </Button>

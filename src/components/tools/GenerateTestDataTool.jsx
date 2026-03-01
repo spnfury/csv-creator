@@ -126,7 +126,7 @@ const GenerateTestDataTool = () => {
   };
 
   return (
-    <div className="bg-white rounded-3xl shadow-2xl border-4 border-red-600 p-8 md:p-12">
+    <div className="bg-white rounded-3xl shadow-2xl border-4 border-blue-600 p-8 md:p-12">
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
@@ -135,22 +135,22 @@ const GenerateTestDataTool = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           {/* Columna de configuración */}
           <div>
-            <h3 className="text-3xl font-bold text-gray-800 mb-6 flex items-center gap-3"><Settings2 className="w-8 h-8 text-red-600" />Configuración de Datos</h3>
+            <h3 className="text-3xl font-bold text-gray-800 mb-6 flex items-center gap-3"><Settings2 className="w-8 h-8 text-blue-600" />Configuración de Datos</h3>
             
             <div className="space-y-4 mb-8">
               {fields.map((field, index) => (
-                <motion.div key={index} layout className="flex items-center gap-2 bg-red-50 p-3 rounded-lg border border-red-200">
+                <motion.div key={index} layout className="flex items-center gap-2 bg-blue-50 p-3 rounded-lg border border-blue-200">
                   <Input 
                     placeholder="Nombre de columna" 
                     value={field.name} 
                     onChange={(e) => handleFieldChange(index, 'name', e.target.value)}
-                    className="flex-grow border-red-300 focus:border-red-500 focus:ring-red-500"
+                    className="flex-grow border-blue-300 focus:border-blue-500 focus:ring-blue-500"
                   />
-                  <ArrowRight className="text-red-400"/>
+                  <ArrowRight className="text-blue-400"/>
                   <select 
                     value={field.type} 
                     onChange={(e) => handleFieldChange(index, 'type', e.target.value)}
-                    className="flex-grow p-2 border border-red-300 rounded-md bg-white focus:outline-none focus:ring-2 focus:ring-red-500"
+                    className="flex-grow p-2 border border-blue-300 rounded-md bg-white focus:outline-none focus:ring-2 focus:ring-blue-500"
                   >
                     {fieldTypes.map(type => (
                       <option key={type.id} value={type.id}>{type.name}</option>
@@ -163,7 +163,7 @@ const GenerateTestDataTool = () => {
               ))}
             </div>
 
-            <Button onClick={handleAddField} variant="outline" className="w-full mb-8 border-red-500 text-red-600 font-semibold hover:bg-red-50">
+            <Button onClick={handleAddField} variant="outline" className="w-full mb-8 border-blue-500 text-blue-600 font-semibold hover:bg-blue-50">
               <Plus className="w-5 h-5 mr-2"/>Añadir Campo
             </Button>
 
@@ -175,18 +175,18 @@ const GenerateTestDataTool = () => {
                 value={rowCount}
                 onChange={(e) => setRowCount(Math.max(1, parseInt(e.target.value) || 1))}
                 min="1"
-                className="w-full text-lg border-red-300 focus:border-red-500 focus:ring-red-500"
+                className="w-full text-lg border-blue-300 focus:border-blue-500 focus:ring-blue-500"
               />
             </div>
             
-            <Button onClick={handleGenerateData} className="w-full bg-red-600 hover:bg-red-700 text-white text-xl font-bold py-6 rounded-lg">
+            <Button onClick={handleGenerateData} className="w-full bg-blue-600 hover:bg-blue-700 text-white text-xl font-bold py-6 rounded-lg">
                 Generar Datos
             </Button>
           </div>
 
           {/* Columna de resultados y exportación */}
           <div>
-            <h3 className="text-3xl font-bold text-gray-800 mb-6 flex items-center gap-3"><Download className="w-8 h-8 text-red-600" />Resultado y Exportación</h3>
+            <h3 className="text-3xl font-bold text-gray-800 mb-6 flex items-center gap-3"><Download className="w-8 h-8 text-blue-600" />Resultado y Exportación</h3>
             {generatedData.length > 0 ? (
               <motion.div initial={{opacity: 0}} animate={{opacity: 1}}>
                 <div className="bg-gray-100 p-4 rounded-lg h-80 overflow-auto border border-gray-300 mb-6 font-mono text-sm">
@@ -202,7 +202,7 @@ const GenerateTestDataTool = () => {
                 </div>
               </motion.div>
             ) : (
-              <div className="flex items-center justify-center bg-red-50 rounded-lg h-96 border-2 border-dashed border-red-200 text-red-500 text-center p-4">
+              <div className="flex items-center justify-center bg-blue-50 rounded-lg h-96 border-2 border-dashed border-blue-200 text-blue-500 text-center p-4">
                 <p className="text-xl font-semibold">Los datos generados aparecerán aquí.</p>
               </div>
             )}

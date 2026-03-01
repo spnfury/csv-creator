@@ -126,7 +126,7 @@ import React, { useState } from 'react';
         };
 
         return (
-            <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="bg-white rounded-3xl shadow-2xl border-4 border-red-600 p-8 md:p-12">
+            <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="bg-white rounded-3xl shadow-2xl border-4 border-blue-600 p-8 md:p-12">
                 <div className="mb-8">
                     <label htmlFor="csvInput" className="block text-2xl font-bold text-gray-800 mb-3 flex items-center gap-2">
                         <Upload className="w-8 h-8"/>
@@ -136,7 +136,7 @@ import React, { useState } from 'react';
                         id="csvInput"
                         value={csvContent}
                         onChange={(e) => handleCsvChange(e.target.value)}
-                        className="w-full h-64 px-6 py-5 text-lg border-4 border-red-300 rounded-xl focus:outline-none focus:ring-4 focus:ring-red-500 focus:border-red-500 font-mono resize-y transition-all"
+                        className="w-full h-64 px-6 py-5 text-lg border-4 border-blue-300 rounded-xl focus:outline-none focus:ring-4 focus:ring-blue-500 focus:border-blue-500 font-mono resize-y transition-all"
                         placeholder="latitude,longitude,nombre,descripcion&#10;40.7128,-74.0060,Nueva York,La Gran Manzana"
                     />
                 </div>
@@ -171,7 +171,7 @@ import React, { useState } from 'react';
                     </div>
                 </div>
 
-                <Button onClick={convertToGeoJson} className="w-full bg-red-600 hover:bg-red-700 text-white text-2xl md:text-3xl font-bold py-8 px-8 rounded-xl shadow-lg hover:shadow-xl transition-all transform hover:scale-105">
+                <Button onClick={convertToGeoJson} className="w-full bg-blue-600 hover:bg-blue-700 text-white text-2xl md:text-3xl font-bold py-8 px-8 rounded-xl shadow-lg hover:shadow-xl transition-all transform hover:scale-105">
                     <ArrowRight className="w-10 h-10 mr-3" strokeWidth={3} />
                     CONVERTIR A GEOJSON
                 </Button>
@@ -183,7 +183,7 @@ import React, { useState } from 'react';
                                 <FileJson className="w-8 h-8"/>
                                 Resultado GeoJSON:
                             </label>
-                            <Button variant="outline" size="sm" onClick={copyToClipboard} className="flex items-center gap-2 text-red-600 border-red-500 hover:bg-red-50">
+                            <Button variant="outline" size="sm" onClick={copyToClipboard} className="flex items-center gap-2 text-blue-600 border-blue-500 hover:bg-blue-50">
                                 <Copy className="w-4 h-4" />
                                 Copiar
                             </Button>

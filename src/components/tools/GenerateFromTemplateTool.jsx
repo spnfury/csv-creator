@@ -104,7 +104,7 @@ function GenerateFromTemplateTool() {
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5 }}
-      className="p-4 md:p-6 bg-white rounded-3xl shadow-lg border-2 border-red-100"
+      className="p-4 md:p-6 bg-white rounded-3xl shadow-lg border-2 border-blue-100"
     >
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         <div>
@@ -114,7 +114,7 @@ function GenerateFromTemplateTool() {
             value={template}
             onChange={(e) => setTemplate(e.target.value)}
             placeholder={t('generateFromTemplate.templatePlaceholder')}
-            className="w-full h-40 p-3 bg-gray-50 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-red-500 focus:border-red-500 transition-shadow"
+            className="w-full h-40 p-3 bg-gray-50 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-shadow"
           />
         </div>
         <div>
@@ -124,13 +124,13 @@ function GenerateFromTemplateTool() {
             value={csvData}
             onChange={(e) => setCsvData(e.target.value)}
             placeholder={t('generateFromTemplate.csvDataPlaceholder')}
-            className="w-full h-40 p-3 bg-gray-50 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-red-500 focus:border-red-500 transition-shadow"
+            className="w-full h-40 p-3 bg-gray-50 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-shadow"
           />
         </div>
       </div>
       
       <div className="flex flex-col sm:flex-row gap-4 justify-center my-6">
-        <Button onClick={handleGenerate} className="bg-red-600 hover:bg-red-700 text-white font-bold py-3 px-6 rounded-lg text-lg shadow-md hover:shadow-lg transition-all transform hover:scale-105">
+        <Button onClick={handleGenerate} className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg text-lg shadow-md hover:shadow-lg transition-all transform hover:scale-105">
           <Sparkles className="mr-2 h-5 w-5" />
           {t('generateFromTemplate.generateButton')}
         </Button>

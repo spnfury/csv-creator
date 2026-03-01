@@ -134,15 +134,15 @@ const CsvViewerEditorTool = () => {
         <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            className="bg-white rounded-3xl shadow-2xl border-4 border-red-600 p-8 md:p-12"
+            className="bg-white rounded-3xl shadow-2xl border-4 border-blue-600 p-8 md:p-12"
         >
-            <div className="bg-red-50 rounded-xl p-6 border-2 border-red-200 mb-8" onPaste={handlePaste}>
-                 <h3 className="text-2xl font-bold text-red-700 mb-4 flex items-center gap-2">
+            <div className="bg-blue-50 rounded-xl p-6 border-2 border-blue-200 mb-8" onPaste={handlePaste}>
+                 <h3 className="text-2xl font-bold text-blue-700 mb-4 flex items-center gap-2">
                     <Upload className="w-8 h-8" />
                     Cargar Datos
                 </h3>
                 <p className="text-xl text-gray-700">
-                    Simplemente <strong className="text-red-600">pega tu contenido CSV</strong> en cualquier lugar de esta sección para empezar a editar.
+                    Simplemente <strong className="text-blue-600">pega tu contenido CSV</strong> en cualquier lugar de esta sección para empezar a editar.
                 </p>
             </div>
 
@@ -151,15 +151,15 @@ const CsvViewerEditorTool = () => {
                 <Button onClick={addColumn} className="flex-1 text-lg py-6"><PlusCircle className="mr-2 h-5 w-5" />Añadir Columna</Button>
             </div>
 
-            <div className="overflow-x-auto bg-gray-50 p-2 rounded-lg border-2 border-red-200 mb-8">
+            <div className="overflow-x-auto bg-gray-50 p-2 rounded-lg border-2 border-blue-200 mb-8">
                 <table className="w-full border-collapse">
                     <thead>
                         <tr>
-                            <th className="p-2 border border-red-200 bg-red-100"></th>
+                            <th className="p-2 border border-blue-200 bg-blue-100"></th>
                             {grid[0]?.map((_, colIndex) => (
-                                <th key={colIndex} className="p-2 border border-red-200 bg-red-100 relative">
-                                    <span className="font-semibold text-red-700">Col {colIndex + 1}</span>
-                                    <Button variant="ghost" size="icon" className="absolute top-0 right-0 h-full w-8 text-red-500 hover:bg-red-200" onClick={() => removeColumn(colIndex)}>
+                                <th key={colIndex} className="p-2 border border-blue-200 bg-blue-100 relative">
+                                    <span className="font-semibold text-blue-700">Col {colIndex + 1}</span>
+                                    <Button variant="ghost" size="icon" className="absolute top-0 right-0 h-full w-8 text-blue-500 hover:bg-blue-200" onClick={() => removeColumn(colIndex)}>
                                         <Trash2 className="h-4 w-4" />
                                     </Button>
                                 </th>
@@ -169,18 +169,18 @@ const CsvViewerEditorTool = () => {
                     <tbody>
                         {grid.map((row, rowIndex) => (
                             <tr key={rowIndex} className="group">
-                                <td className="p-0 border border-red-200 bg-red-100 relative text-center">
-                                     <Button variant="ghost" size="icon" className="h-full w-full text-red-500 hover:bg-red-200" onClick={() => removeRow(rowIndex)}>
+                                <td className="p-0 border border-blue-200 bg-blue-100 relative text-center">
+                                     <Button variant="ghost" size="icon" className="h-full w-full text-blue-500 hover:bg-blue-200" onClick={() => removeRow(rowIndex)}>
                                         <Trash2 className="h-4 w-4" />
                                     </Button>
                                 </td>
                                 {row.map((cell, colIndex) => (
-                                    <td key={colIndex} className="p-0 border border-red-200">
+                                    <td key={colIndex} className="p-0 border border-blue-200">
                                         <input
                                             type="text"
                                             value={cell}
                                             onChange={(e) => handleCellChange(e, rowIndex, colIndex)}
-                                            className="w-full p-2 bg-transparent focus:bg-white focus:outline-none focus:ring-2 focus:ring-red-500"
+                                            className="w-full p-2 bg-transparent focus:bg-white focus:outline-none focus:ring-2 focus:ring-blue-500"
                                         />
                                     </td>
                                 ))}
@@ -199,17 +199,17 @@ const CsvViewerEditorTool = () => {
                     type="text"
                     value={fileName}
                     onChange={(e) => setFileName(e.target.value)}
-                    className="w-full md:w-1/2 px-6 py-5 text-2xl border-4 border-red-300 rounded-xl focus:outline-none focus:ring-4 focus:ring-red-500 focus:border-red-500 transition-all"
+                    className="w-full md:w-1/2 px-6 py-5 text-2xl border-4 border-blue-300 rounded-xl focus:outline-none focus:ring-4 focus:ring-blue-500 focus:border-blue-500 transition-all"
                     placeholder="editado"
                 />
-                 <p className="mt-2 text-xl text-gray-600">Se guardará como: <span className="font-bold text-red-600">{fileName}.csv</span></p>
+                 <p className="mt-2 text-xl text-gray-600">Se guardará como: <span className="font-bold text-blue-600">{fileName}.csv</span></p>
             </div>
 
 
             <div className="flex flex-col md:flex-row gap-4">
                  <Button
                     onClick={handleDownload}
-                    className="flex-1 bg-red-600 hover:bg-red-700 text-white text-2xl md:text-3xl font-bold py-8 px-8 rounded-xl shadow-lg hover:shadow-xl transition-all transform hover:scale-105"
+                    className="flex-1 bg-blue-600 hover:bg-blue-700 text-white text-2xl md:text-3xl font-bold py-8 px-8 rounded-xl shadow-lg hover:shadow-xl transition-all transform hover:scale-105"
                 >
                     <Download className="w-10 h-10 mr-3" strokeWidth={3} />
                     DESCARGAR CSV
@@ -217,7 +217,7 @@ const CsvViewerEditorTool = () => {
                 <Button
                     onClick={handleClear}
                     variant="outline"
-                    className="flex-1 border-4 border-red-600 text-red-600 hover:bg-red-50 text-2xl md:text-3xl font-bold py-8 px-8 rounded-xl shadow-lg hover:shadow-xl transition-all"
+                    className="flex-1 border-4 border-blue-600 text-blue-600 hover:bg-blue-50 text-2xl md:text-3xl font-bold py-8 px-8 rounded-xl shadow-lg hover:shadow-xl transition-all"
                 >
                     <Trash2 className="w-8 h-8 mr-3" />
                     LIMPIAR TABLA

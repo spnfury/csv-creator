@@ -137,7 +137,7 @@ const CsvToXmlTool = () => {
         <div className="space-y-4">
           <div>
             <label htmlFor="csv-input" className="text-lg font-semibold text-gray-700 flex items-center">
-              <FileText className="w-5 h-5 mr-2 text-red-500" />
+              <FileText className="w-5 h-5 mr-2 text-blue-500" />
               {t('csvToXml.csvInputLabel')}
             </label>
             <Textarea
@@ -145,13 +145,13 @@ const CsvToXmlTool = () => {
               value={csvContent}
               onChange={(e) => setCsvContent(e.target.value)}
               placeholder={t('csvToXml.placeholder')}
-              className="min-h-[200px] text-base border-gray-300 focus:ring-red-500 focus:border-red-500 font-mono"
+              className="min-h-[200px] text-base border-gray-300 focus:ring-blue-500 focus:border-blue-500 font-mono"
             />
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             <div>
               <label htmlFor="root-tag" className="text-lg font-semibold text-gray-700 flex items-center">
-                <FileCode className="w-5 h-5 mr-2 text-red-500" />
+                <FileCode className="w-5 h-5 mr-2 text-blue-500" />
                 {t('csvToXml.rootTagLabel')}
               </label>
               <Input
@@ -159,12 +159,12 @@ const CsvToXmlTool = () => {
                 value={rootTag}
                 onChange={(e) => setRootTag(e.target.value)}
                 placeholder={t('csvToXml.rootTagPlaceholder')}
-                className="text-base border-gray-300 focus:ring-red-500 focus:border-red-500"
+                className="text-base border-gray-300 focus:ring-blue-500 focus:border-blue-500"
               />
             </div>
             <div>
               <label htmlFor="record-tag" className="text-lg font-semibold text-gray-700 flex items-center">
-                <FileCode className="w-5 h-5 mr-2 text-red-500" />
+                <FileCode className="w-5 h-5 mr-2 text-blue-500" />
                 {t('csvToXml.recordTagLabel')}
               </label>
               <Input
@@ -172,27 +172,27 @@ const CsvToXmlTool = () => {
                 value={recordTag}
                 onChange={(e) => setRecordTag(e.target.value)}
                 placeholder={t('csvToXml.recordTagPlaceholder')}
-                className="text-base border-gray-300 focus:ring-red-500 focus:border-red-500"
+                className="text-base border-gray-300 focus:ring-blue-500 focus:border-blue-500"
               />
             </div>
           </div>
         </div>
         <div className="space-y-2">
           <label htmlFor="result-output" className="text-lg font-semibold text-gray-700 flex items-center">
-            <FileCode className="w-5 h-5 mr-2 text-red-500" />
+            <FileCode className="w-5 h-5 mr-2 text-blue-500" />
             {t('csvToXml.resultLabel')}
           </label>
           <Textarea
             id="result-output"
             value={result}
             readOnly
-            className="min-h-[360px] text-base bg-gray-50 border-gray-300 focus:ring-red-500 focus:border-red-500 font-mono"
+            className="min-h-[360px] text-base bg-gray-50 border-gray-300 focus:ring-blue-500 focus:border-blue-500 font-mono"
           />
         </div>
       </div>
       
       <div className="flex flex-wrap gap-4">
-        <Button onClick={handleConvert} className="bg-red-600 hover:bg-red-700 text-white font-bold text-lg py-6 flex-grow">
+        <Button onClick={handleConvert} className="bg-blue-600 hover:bg-blue-700 text-white font-bold text-lg py-6 flex-grow">
           <Wand2 className="w-6 h-6 mr-2" />
           {t('csvToXml.convertButton')}
         </Button>

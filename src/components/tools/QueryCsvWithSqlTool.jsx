@@ -104,7 +104,7 @@ const QueryCsvWithSqlTool = () => {
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
         <div className="space-y-2">
           <label htmlFor="csv-input" className="text-lg font-semibold text-gray-700 flex items-center">
-            <FileText className="w-5 h-5 mr-2 text-red-500" />
+            <FileText className="w-5 h-5 mr-2 text-blue-500" />
             {t('queryCsvWithSql.csvInputLabel')}
           </label>
           <Textarea
@@ -112,12 +112,12 @@ const QueryCsvWithSqlTool = () => {
             value={csvData}
             onChange={(e) => setCsvData(e.target.value)}
             placeholder={t('queryCsvWithSql.csvPlaceholder')}
-            className="min-h-[200px] text-base border-gray-300 focus:ring-red-500 focus:border-red-500 font-mono"
+            className="min-h-[200px] text-base border-gray-300 focus:ring-blue-500 focus:border-blue-500 font-mono"
           />
         </div>
         <div className="space-y-2">
           <label htmlFor="sql-input" className="text-lg font-semibold text-gray-700 flex items-center">
-            <Database className="w-5 h-5 mr-2 text-red-500" />
+            <Database className="w-5 h-5 mr-2 text-blue-500" />
             {t('queryCsvWithSql.sqlInputLabel')}
           </label>
           <Textarea
@@ -125,11 +125,11 @@ const QueryCsvWithSqlTool = () => {
             value={sqlQuery}
             onChange={(e) => setSqlQuery(e.target.value)}
             placeholder={t('queryCsvWithSql.sqlPlaceholder')}
-            className="min-h-[200px] text-base border-gray-300 focus:ring-red-500 focus:border-red-500 font-mono"
+            className="min-h-[200px] text-base border-gray-300 focus:ring-blue-500 focus:border-blue-500 font-mono"
           />
         </div>
       </div>
-      <Button onClick={handleExecuteQuery} className="w-full bg-red-600 hover:bg-red-700 text-white font-bold text-lg py-6">
+      <Button onClick={handleExecuteQuery} className="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold text-lg py-6">
         <Play className="w-6 h-6 mr-2" />
         {t('queryCsvWithSql.executeQueryButton')}
       </Button>
@@ -138,7 +138,7 @@ const QueryCsvWithSqlTool = () => {
           {t('queryCsvWithSql.resultTitle')}
         </h3>
         <div className="min-h-[150px] bg-gray-50 border rounded-md p-4">
-          {error ? <p className="text-red-500">{error}</p> : renderTable()}
+          {error ? <p className="text-blue-500">{error}</p> : renderTable()}
         </div>
       </div>
       {queryResult && queryResult.length > 0 && (

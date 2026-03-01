@@ -128,7 +128,7 @@ const CsvToKmlTool = () => {
     >
       <div className="space-y-2">
         <label htmlFor="csv-input" className="text-lg font-semibold text-gray-700 flex items-center">
-          <FileText className="w-5 h-5 mr-2 text-red-500" />
+          <FileText className="w-5 h-5 mr-2 text-blue-500" />
           {t('csvToKml.csvInputLabel')}
         </label>
         <Textarea
@@ -136,7 +136,7 @@ const CsvToKmlTool = () => {
           value={csvContent}
           onChange={(e) => setCsvContent(e.target.value)}
           placeholder={t('csvToKml.placeholder')}
-          className="min-h-[200px] text-base border-gray-300 focus:ring-red-500 focus:border-red-500"
+          className="min-h-[200px] text-base border-gray-300 focus:ring-blue-500 focus:border-blue-500"
           rows={10}
         />
       </div>
@@ -162,7 +162,7 @@ const CsvToKmlTool = () => {
       
       <div className="space-y-2">
         <label htmlFor="file-name" className="text-lg font-semibold text-gray-700 flex items-center">
-          <FileDown className="w-5 h-5 mr-2 text-red-500" />
+          <FileDown className="w-5 h-5 mr-2 text-blue-500" />
           {t('csvToKml.fileNameLabel')}
         </label>
         <Input
@@ -170,12 +170,12 @@ const CsvToKmlTool = () => {
           value={fileName}
           onChange={(e) => setFileName(e.target.value)}
           placeholder={t('csvToKml.fileNamePlaceholder')}
-          className="text-base border-gray-300 focus:ring-red-500 focus:border-red-500"
+          className="text-base border-gray-300 focus:ring-blue-500 focus:border-blue-500"
         />
       </div>
 
       <div className="flex flex-col sm:flex-row gap-4">
-        <Button onClick={handleConvert} className="w-full bg-red-600 hover:bg-red-700 text-white font-bold text-lg py-6 flex-grow">
+        <Button onClick={handleConvert} className="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold text-lg py-6 flex-grow">
           <Globe className="w-6 h-6 mr-2" />
           {t('csvToKml.convertButton')}
         </Button>
