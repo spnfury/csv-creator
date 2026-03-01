@@ -1,0 +1,243 @@
+{
+  "home": {
+    "pageTitle": "CSV Creator - เครื่องมือฟรีสำหรับไฟล์ CSV",
+    "pageDescription": "ชุดเครื่องมือออนไลน์ฟรีที่สมบูรณ์ที่สุดในการแปลง แก้ไข และจัดการไฟล์ CSV ของคุณ แปลงข้อมูลของคุณเป็น JSON, Excel, PDF และอีกมากมาย",
+    "headerTitle": "CSV Creator",
+    "headerSubtitle": "ชุดเครื่องมือที่ดีที่สุดสำหรับทำงานกับไฟล์ CSV",
+    "instructionsTitle": "ง่ายสุดๆ!",
+    "instruction1": "วางหรือพิมพ์ข้อมูล CSV ของคุณในพื้นที่ข้อความ",
+    "instruction2": "เลือกเครื่องมือที่มีประสิทธิภาพของเราจากรายการ",
+    "instruction3": "แปลง แก้ไข หรือดาวน์โหลดข้อมูลของคุณได้ทันที!",
+    "fileNameLabel": "ชื่อไฟล์",
+    "fileNamePlaceholder": "ตัวอย่าง: ข้อมูลที่แปลงแล้วของฉัน",
+    "fileNameDescription": "ไฟล์ของคุณจะถูกดาวน์โหลดเป็น \"{fileName}.csv\"",
+    "csvInputLabel": "วางข้อมูล CSV ของคุณที่นี่",
+    "csvInputPlaceholder": "id,name,email\n1,สมชาย,somchai@example.com\n2,สมหญิง,somying@example.com\n...",
+    "csvReady": "ข้อมูล CSV ของคุณพร้อมใช้งานแล้ว!",
+    "downloadButton": "ดาวน์โหลด CSV",
+    "clearButton": "ล้าง",
+    "toolsSectionTitle": "เครื่องมือ CSV ของเรา",
+    "toolsSectionSubtitle": "แปลง แก้ไข และแปลงข้อมูล CSV ของคุณด้วยชุดยูทิลิตี้ฟรีที่สมบูรณ์ของเรา",
+    "whatIsCsvTitle": "ไฟล์ CSV คืออะไร",
+    "whatIsCsvText": "ไฟล์ CSV (Comma-Separated Values) คือรูปแบบข้อความธรรมดาที่จัดเก็บข้อมูลในรูปแบบตาราง แต่ละบรรทัดแทนแถวของข้อมูล และแต่ละค่าภายในแถวนั้นจะถูกคั่นด้วยเครื่องหมายจุลภาค เป็นรูปแบบที่เข้ากันได้ในระดับสากล เหมาะสำหรับการแลกเปลี่ยนข้อมูลระหว่างแอปพลิเคชันต่างๆ เช่น Excel, Google Sheets หรือฐานข้อมูล",
+    "csvExampleTitle": "ตัวอย่าง CSV",
+    "csvExampleContent": "id,product,price,stock\n1,แล็ปท็อป,1200,50\n2,สมาร์ทโฟน,800,150\n3,หูฟัง,150,300",
+    "shareTitle": "คุณชอบ CSV Creator ไหม",
+    "shareSubtitle": "ช่วยให้เราเข้าถึงผู้คนได้มากขึ้น! แบ่งปันเครื่องมือนี้กับเพื่อนหรือเพื่อนร่วมงานของคุณ เราจะขอบคุณมาก!",
+    "shareButton": "แชร์เลย",
+    "footerText": "สร้างสรรค์ด้วย ❤️ โดยนักคิดสร้างสรรค์",
+    "footerRights": "© {year} CSV Creator สงวนลิขสิทธิ์",
+    "privacyPolicy": "นโยบายความเป็นส่วนตัว",
+    "termsOfService": "ข้อกำหนดในการให้บริการ"
+  },
+  "toolCategories": {
+    "toCsv": "แปลงเป็น CSV",
+    "fromCsv": "แปลงจาก CSV",
+    "other": "ยูทิลิตี้อื่นๆ"
+  },
+  "toolpage": {
+    "loading": "กำลังโหลดเครื่องมือ...",
+    "toolNotFound": "ไม่พบเครื่องมือ",
+    "toolNotFoundDescription": "เครื่องมือที่คุณกำลังมองหาไม่มีอยู่หรือถูกย้ายไปแล้ว",
+    "breadcrumbHome": "หน้าแรก",
+    "underConstructionTitle": "เครื่องมือกำลังอยู่ในระหว่างการพัฒนา!",
+    "underConstructionText": "เรากำลังทำงานอย่างหนักเพื่อนำเสนอเครื่องมือที่น่าทึ่งนี้ให้คุณ โปรดกลับมาใหม่เร็วๆ นี้!",
+    "backToHome": "กลับไปที่หน้าแรก",
+    "shareWithFriends": "แบ่งปันกับเพื่อน",
+    "addToFavorites": "เพิ่มในรายการโปรด",
+    "addFavoritesToastTitle": "เพิ่มในรายการโปรดแล้ว!",
+    "addFavoritesToastDescription": "คุณสามารถเข้าถึงหน้านี้ได้จากบุ๊กมาร์กของเบราว์เซอร์ของคุณ",
+    "otherToolsTitle": "ค้นพบเครื่องมืออื่นๆ",
+    "downloadAsTxt": "ดาวน์โหลดเป็น TXT",
+    "downloadAsXml": "ดาวน์โหลดเป็น XML",
+    "downloadAsHtml": "ดาวน์โหลดเป็น HTML"
+  },
+  "modals": {
+    "shareTitle": "แบ่งปันเครื่องมือนี้!",
+    "shareDescription": "ถ้าคุณชอบ {toolTitle} แบ่งปันกับเพื่อนของคุณ!",
+    "copyLink": "คัดลอกลิงก์",
+    "copied": "คัดลอกแล้ว!",
+    "shareOn": "แบ่งปันบน",
+    "close": "ปิด"
+  },
+  "toasts": {
+    "csvPasted": "วาง CSV แล้ว!",
+    "csvPastedDescription": "ข้อมูลของคุณอยู่ในตัวแก้ไข พร้อมใช้งานแล้ว",
+    "errorNoCsv": "ไม่มีข้อมูล CSV!",
+    "errorNoCsvDescription": "กรุณาวางหรือเขียนข้อมูล CSV ก่อนดาวน์โหลด",
+    "downloaded": "ดาวน์โหลดแล้ว!",
+    "downloadedDescription": "ไฟล์ CSV ของคุณกำลังดาวน์โหลด",
+    "errorDownloading": "เกิดข้อผิดพลาดในการดาวน์โหลด",
+    "errorDownloadingDescription": "เกิดปัญหาในการเตรียมไฟล์ของคุณ",
+    "cleared": "ล้างแล้ว!",
+    "clearedDescription": "พื้นที่ข้อความว่างเปล่า",
+    "notImplemented": "🚧 คุณสมบัติยังไม่ถูกนำไปใช้!",
+    "notImplementedDescription": "แต่ไม่ต้องกังวล! คุณสามารถร้องขอได้ในข้อความถัดไปของคุณ 🚀",
+    "errorProcessing": "ข้อผิดพลาดในการประมวลผล",
+    "errorProcessingDescription": "เกิดปัญหาในการประมวลผลข้อมูลของคุณ กรุณาตรวจสอบรูปแบบ",
+    "success": "สำเร็จ!",
+    "successDescription": "การดำเนินการเสร็จสมบูรณ์"
+  },
+  "tools": {
+    "json-to-csv": {
+      "slug": "json-to-csv-excel-th",
+      "title": "JSON เป็น CSV",
+      "description": "แปลงข้อมูล JSON เป็นรูปแบบ CSV อย่างรวดเร็วและง่ายดาย"
+    },
+    "csv-to-delimited": {
+      "slug": "csv-to-delimited-th",
+      "title": "CSV เป็นแบบมีตัวคั่น",
+      "description": "เปลี่ยนตัวคั่นของ CSV ของคุณ (จุลภาค, อัฒภาค, แท็บ)"
+    },
+    "csv-to-fixed-width": {
+      "slug": "csv-to-fixed-width-th",
+      "title": "CSV เป็นความกว้างคงที่",
+      "description": "แปลงข้อมูล CSV เป็นรูปแบบข้อความที่มีความกว้างคงที่"
+    },
+    "fixed-width-to-csv": {
+      "slug": "fixed-width-to-csv-excel-th",
+      "title": "ความกว้างคงที่เป็น CSV",
+      "description": "แปลงข้อความที่มีความกว้างคงที่เป็นไฟล์ CSV ที่มีโครงสร้างดี"
+    },
+    "yaml-to-csv": {
+      "slug": "yaml-to-csv-excel-th",
+      "title": "YAML เป็น CSV",
+      "description": "แปลงข้อมูลในรูปแบบ YAML เป็น CSV"
+    },
+    "kml-to-csv": {
+      "slug": "kml-to-csv-excel-th",
+      "title": "KML เป็น CSV",
+      "description": "ดึงข้อมูลจากไฟล์ KML และแปลงเป็น CSV"
+    },
+    "csv-viewer-editor": {
+      "slug": "csv-viewer-editor-th",
+      "title": "โปรแกรมดูและแก้ไข CSV",
+      "description": "ดู แก้ไข และจัดการข้อมูล CSV ของคุณในตารางแบบโต้ตอบ"
+    },
+    "split-csv": {
+      "slug": "split-csv-th",
+      "title": "แบ่ง CSV",
+      "description": "แบ่งไฟล์ CSV ขนาดใหญ่เป็นไฟล์ขนาดเล็กหลายไฟล์"
+    },
+    "geojson-to-csv": {
+      "slug": "geojson-to-csv-excel-th",
+      "title": "GeoJSON เป็น CSV",
+      "description": "แปลงข้อมูล GeoJSON เป็นรูปแบบ CSV"
+    },
+    "html-links-to-csv": {
+      "slug": "html-links-to-csv-excel-th",
+      "title": "ลิงก์ HTML เป็น CSV",
+      "description": "ดึงลิงก์ทั้งหมดจากโค้ด HTML และบันทึกเป็น CSV"
+    },
+    "csv-to-markdown": {
+      "slug": "csv-to-markdown-th",
+      "title": "CSV เป็น Markdown",
+      "description": "แปลงข้อมูล CSV ของคุณเป็นตารางในรูปแบบ Markdown"
+    },
+    "html-table-to-csv": {
+      "slug": "html-table-to-csv-excel-th",
+      "title": "ตาราง HTML เป็น CSV",
+      "description": "ดึงข้อมูลจากตาราง HTML และแปลงเป็น CSV"
+    },
+    "csv-to-geojson": {
+      "slug": "csv-to-geojson-th",
+      "title": "CSV เป็น GeoJSON",
+      "description": "แปลงข้อมูล CSV ที่มีพิกัดเป็นรูปแบบ GeoJSON"
+    },
+    "email-extractor": {
+      "slug": "email-extractor-th",
+      "title": "ตัวแยกอีเมล",
+      "description": "ดึงที่อยู่อีเมลทั้งหมดจากข้อความ"
+    },
+    "phone-extractor": {
+      "slug": "phone-extractor-th",
+      "title": "ตัวแยกเบอร์โทรศัพท์",
+      "description": "ดึงหมายเลขโทรศัพท์ทั้งหมดจากข้อความ"
+    },
+    "generate-test-data": {
+      "slug": "generate-test-data-th",
+      "title": "สร้างข้อมูลทดสอบ",
+      "description": "สร้างข้อมูลทดสอบปลอมในรูปแบบ CSV สำหรับโครงการของคุณ"
+    },
+    "csv-to-html-mediawiki": {
+      "slug": "csv-to-html-mediawiki-table-th",
+      "title": "CSV เป็นตาราง HTML/MediaWiki",
+      "description": "แปลง CSV เป็นตารางที่เข้ากันได้กับ HTML หรือ MediaWiki"
+    },
+    "generate-from-template": {
+      "slug": "generate-from-template-th",
+      "title": "สร้างจากเทมเพลต",
+      "description": "สร้างข้อความจำนวนมากโดยใช้ CSV เป็นแหล่งข้อมูลสำหรับเทมเพลต"
+    },
+    "web-to-text": {
+      "slug": "convert-web-to-text-th",
+      "title": "แปลงเว็บเป็นข้อความ",
+      "description": "ดึงข้อความที่อ่านได้จากหน้าเว็บจาก URL"
+    },
+    "csv-to-word": {
+      "slug": "csv-to-word-docx-th",
+      "title": "CSV เป็น Word (DOCX)",
+      "description": "แปลงข้อมูล CSV เป็นตารางในเอกสาร Word (.docx)"
+    },
+    "csv-to-kml": {
+      "slug": "csv-to-kml-th",
+      "title": "CSV เป็น KML",
+      "description": "แปลงพิกัด CSV เป็นไฟล์ KML สำหรับแผนที่"
+    },
+    "csv-to-pdf": {
+      "slug": "csv-to-pdf-th",
+      "title": "CSV เป็น PDF",
+      "description": "แปลงข้อมูล CSV ของคุณเป็นตารางภายในเอกสาร PDF"
+    },
+    "xml-to-csv": {
+      "slug": "xml-to-csv-excel-th",
+      "title": "XML เป็น CSV",
+      "description": "แปลงข้อมูลจากรูปแบบ XML เป็น CSV"
+    },
+    "sql-to-csv": {
+      "slug": "sql-to-csv-excel-th",
+      "title": "SQL เป็น CSV",
+      "description": "แปลง SQL dump (INSERTs) เป็นไฟล์ CSV"
+    },
+    "csv-to-json": {
+      "slug": "csv-to-json-th",
+      "title": "CSV เป็น JSON",
+      "description": "แปลงข้อมูล CSV เป็นรูปแบบ JSON (อาร์เรย์ของอ็อบเจ็กต์)"
+    },
+    "csv-to-multi-line": {
+      "slug": "csv-to-multi-line-th",
+      "title": "CSV เป็นหลายบรรทัด",
+      "description": "แปลงแต่ละแถวของ CSV เป็นบล็อกข้อความที่จัดรูปแบบ"
+    },
+    "csv-to-sql": {
+      "slug": "csv-to-sql-th",
+      "title": "CSV เป็น SQL",
+      "description": "สร้างคำสั่ง SQL (INSERTs) จากข้อมูล CSV ของคุณ"
+    },
+    "csv-to-xml": {
+      "slug": "csv-to-xml-th",
+      "title": "CSV เป็น XML",
+      "description": "แปลงข้อมูล CSV เป็นไฟล์รูปแบบ XML"
+    },
+    "csv-to-yaml": {
+      "slug": "csv-to-yaml-th",
+      "title": "CSV เป็น YAML",
+      "description": "แปลงข้อมูลในรูปแบบ CSV เป็น YAML"
+    },
+    "url-extractor": {
+      "slug": "url-extractor-th",
+      "title": "ตัวแยก URL",
+      "description": "ดึง URL ทั้งหมด (ลิงก์) จากบล็อกข้อความ"
+    },
+    "query-csv-with-sql": {
+      "slug": "query-csv-with-sql-th",
+      "title": "ค้นหา CSV ด้วย SQL",
+      "description": "เรียกใช้คำสั่ง SQL โดยตรงบนข้อมูล CSV ของคุณ"
+    },
+    "transpose-csv": {
+      "slug": "transpose-csv-th",
+      "title": "สลับแถวและคอลัมน์ CSV",
+      "description": "สลับแถวและคอลัมน์ของไฟล์ CSV ของคุณ"
+    }
+  }
+}

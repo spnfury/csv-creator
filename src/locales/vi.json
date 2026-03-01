@@ -1,0 +1,243 @@
+{
+  "home": {
+    "pageTitle": "CSV Creator - Công cụ miễn phí cho tệp CSV",
+    "pageDescription": "Bộ công cụ trực tuyến miễn phí đầy đủ nhất để chuyển đổi, chỉnh sửa và quản lý các tệp CSV của bạn. Chuyển đổi dữ liệu của bạn sang JSON, Excel, PDF và hơn thế nữa.",
+    "headerTitle": "CSV Creator",
+    "headerSubtitle": "Bộ công cụ tối ưu của bạn để làm việc với các tệp CSV",
+    "instructionsTitle": "Siêu dễ!",
+    "instruction1": "Dán hoặc nhập dữ liệu CSV của bạn vào vùng văn bản.",
+    "instruction2": "Chọn một trong những công cụ mạnh mẽ của chúng tôi từ danh sách.",
+    "instruction3": "Chuyển đổi, chỉnh sửa hoặc tải xuống dữ liệu của bạn ngay lập tức!",
+    "fileNameLabel": "Tên tệp",
+    "fileNamePlaceholder": "Ví dụ: du_lieu_da_chuyen_doi_cua_toi",
+    "fileNameDescription": "Tệp của bạn sẽ được tải xuống dưới dạng \"{fileName}.csv\"",
+    "csvInputLabel": "Dán dữ liệu CSV của bạn vào đây",
+    "csvInputPlaceholder": "id,name,email\n1,An,an@example.com\n2,Binh,binh@example.com\n...",
+    "csvReady": "Dữ liệu CSV của bạn đã sẵn sàng hoạt động!",
+    "downloadButton": "Tải xuống CSV",
+    "clearButton": "Xóa",
+    "toolsSectionTitle": "Các công cụ CSV của chúng tôi",
+    "toolsSectionSubtitle": "Chuyển đổi, chỉnh sửa và biến đổi dữ liệu CSV của bạn với bộ sưu tập tiện ích miễn phí hoàn chỉnh của chúng tôi.",
+    "whatIsCsvTitle": "Tệp CSV là gì?",
+    "whatIsCsvText": "Tệp CSV (Comma-Separated Values) là một định dạng văn bản thuần túy lưu trữ dữ liệu dạng bảng. Mỗi dòng đại diện cho một hàng dữ liệu và mỗi giá trị trong hàng đó được phân tách bằng dấu phẩy. Đây là một định dạng tương thích phổ biến, lý tưởng để trao đổi dữ liệu giữa các ứng dụng khác nhau như Excel, Google Sheets hoặc cơ sở dữ liệu.",
+    "csvExampleTitle": "Ví dụ về CSV",
+    "csvExampleContent": "id,product,price,stock\n1,Máy tính xách tay,1200,50\n2,Điện thoại thông minh,800,150\n3,Tai nghe,150,300",
+    "shareTitle": "Bạn có thích CSV Creator không?",
+    "shareSubtitle": "Hãy giúp chúng tôi tiếp cận nhiều người hơn! Chia sẻ công cụ này với bạn bè hoặc đồng nghiệp của bạn. Chúng tôi sẽ rất biết ơn!",
+    "shareButton": "Chia sẻ ngay",
+    "footerText": "Làm bằng ❤️ bởi những bộ óc sáng tạo.",
+    "footerRights": "© {year} CSV Creator. Mọi quyền được bảo lưu.",
+    "privacyPolicy": "Chính sách bảo mật",
+    "termsOfService": "Điều khoản dịch vụ"
+  },
+  "toolCategories": {
+    "toCsv": "Chuyển đổi sang CSV",
+    "fromCsv": "Chuyển đổi từ CSV",
+    "other": "Các tiện ích khác"
+  },
+  "toolpage": {
+    "loading": "Đang tải công cụ...",
+    "toolNotFound": "Không tìm thấy công cụ",
+    "toolNotFoundDescription": "Công cụ bạn đang tìm kiếm không tồn tại hoặc đã bị di chuyển.",
+    "breadcrumbHome": "Trang chủ",
+    "underConstructionTitle": "Công cụ đang được xây dựng!",
+    "underConstructionText": "Chúng tôi đang làm việc chăm chỉ để mang đến cho bạn công cụ tuyệt vời này. Hãy quay lại sớm!",
+    "backToHome": "Quay về trang chủ",
+    "shareWithFriends": "Chia sẻ với bạn bè",
+    "addToFavorites": "Thêm vào Yêu thích",
+    "addFavoritesToastTitle": "Đã thêm vào Yêu thích!",
+    "addFavoritesToastDescription": "Bạn có thể truy cập trang này từ dấu trang của trình duyệt.",
+    "otherToolsTitle": "Khám phá các công cụ khác",
+    "downloadAsTxt": "Tải xuống dưới dạng TXT",
+    "downloadAsXml": "Tải xuống dưới dạng XML",
+    "downloadAsHtml": "Tải xuống dưới dạng HTML"
+  },
+  "modals": {
+    "shareTitle": "Chia sẻ công cụ này!",
+    "shareDescription": "Nếu bạn thích {toolTitle}, hãy chia sẻ nó với bạn bè của bạn!",
+    "copyLink": "Sao chép liên kết",
+    "copied": "Đã sao chép!",
+    "shareOn": "Chia sẻ trên",
+    "close": "Đóng"
+  },
+  "toasts": {
+    "csvPasted": "Đã dán CSV!",
+    "csvPastedDescription": "Dữ liệu của bạn đã có trong trình soạn thảo, sẵn sàng để sử dụng.",
+    "errorNoCsv": "Không có dữ liệu CSV!",
+    "errorNoCsvDescription": "Vui lòng dán hoặc viết dữ liệu CSV trước khi tải xuống.",
+    "downloaded": "Đã tải xuống!",
+    "downloadedDescription": "Tệp CSV của bạn đang được tải xuống.",
+    "errorDownloading": "Lỗi khi tải xuống",
+    "errorDownloadingDescription": "Đã xảy ra sự cố khi chuẩn bị tệp của bạn.",
+    "cleared": "Đã xóa!",
+    "clearedDescription": "Vùng văn bản trống.",
+    "notImplemented": "🚧 Tính năng chưa được triển khai!",
+    "notImplementedDescription": "Nhưng đừng lo! Bạn có thể yêu cầu nó trong lời nhắc tiếp theo của mình. 🚀",
+    "errorProcessing": "Lỗi xử lý",
+    "errorProcessingDescription": "Đã xảy ra sự cố khi xử lý dữ liệu của bạn. Vui lòng kiểm tra định dạng.",
+    "success": "Thành công!",
+    "successDescription": "Thao tác đã hoàn tất thành công."
+  },
+  "tools": {
+    "json-to-csv": {
+      "slug": "json-sang-csv-excel",
+      "title": "JSON sang CSV",
+      "description": "Chuyển đổi dữ liệu JSON sang định dạng CSV một cách nhanh chóng và dễ dàng."
+    },
+    "csv-to-delimited": {
+      "slug": "csv-sang-phan-cach",
+      "title": "CSV sang Phân cách",
+      "description": "Thay đổi dấu phân cách của CSV của bạn (dấu phẩy, chấm phẩy, tab)."
+    },
+    "csv-to-fixed-width": {
+      "slug": "csv-sang-do-rong-co-dinh",
+      "title": "CSV sang Độ rộng cố định",
+      "description": "Chuyển đổi dữ liệu CSV sang định dạng văn bản có độ rộng cố định."
+    },
+    "fixed-width-to-csv": {
+      "slug": "do-rong-co-dinh-sang-csv-excel",
+      "title": "Độ rộng cố định sang CSV",
+      "description": "Chuyển đổi văn bản có độ rộng cố định thành một tệp CSV có cấu trúc tốt."
+    },
+    "yaml-to-csv": {
+      "slug": "yaml-sang-csv-excel",
+      "title": "YAML sang CSV",
+      "description": "Chuyển đổi dữ liệu ở định dạng YAML sang CSV."
+    },
+    "kml-to-csv": {
+      "slug": "kml-sang-csv-excel",
+      "title": "KML sang CSV",
+      "description": "Trích xuất dữ liệu từ tệp KML và chuyển đổi sang CSV."
+    },
+    "csv-viewer-editor": {
+      "slug": "trinh-xem-va-chinh-sua-csv",
+      "title": "Trình xem và chỉnh sửa CSV",
+      "description": "Xem, chỉnh sửa và thao tác dữ liệu CSV của bạn trong một bảng tương tác."
+    },
+    "split-csv": {
+      "slug": "chia-csv",
+      "title": "Chia CSV",
+      "description": "Chia một tệp CSV lớn thành nhiều tệp nhỏ hơn."
+    },
+    "geojson-to-csv": {
+      "slug": "geojson-sang-csv-excel",
+      "title": "GeoJSON sang CSV",
+      "description": "Chuyển đổi dữ liệu GeoJSON sang định dạng CSV."
+    },
+    "html-links-to-csv": {
+      "slug": "lien-ket-html-sang-csv-excel",
+      "title": "Liên kết HTML sang CSV",
+      "description": "Trích xuất tất cả các liên kết từ mã HTML và lưu chúng vào một tệp CSV."
+    },
+    "csv-to-markdown": {
+      "slug": "csv-sang-markdown",
+      "title": "CSV sang Markdown",
+      "description": "Chuyển đổi dữ liệu CSV của bạn thành một bảng có định dạng Markdown."
+    },
+    "html-table-to-csv": {
+      "slug": "bang-html-sang-csv-excel",
+      "title": "Bảng HTML sang CSV",
+      "description": "Trích xuất dữ liệu từ một bảng HTML và chuyển đổi sang CSV."
+    },
+    "csv-to-geojson": {
+      "slug": "csv-sang-geojson",
+      "title": "CSV sang GeoJSON",
+      "description": "Chuyển đổi dữ liệu CSV có tọa độ sang định dạng GeoJSON."
+    },
+    "email-extractor": {
+      "slug": "trich-xuat-email",
+      "title": "Trích xuất Email",
+      "description": "Trích xuất tất cả các địa chỉ email từ một văn bản."
+    },
+    "phone-extractor": {
+      "slug": "trich-xuat-so-dien-thoai",
+      "title": "Trích xuất Số điện thoại",
+      "description": "Trích xuất tất cả các số điện thoại từ một văn bản."
+    },
+    "generate-test-data": {
+      "slug": "tao-du-lieu-thu-nghiem",
+      "title": "Tạo dữ liệu thử nghiệm",
+      "description": "Tạo dữ liệu thử nghiệm giả ở định dạng CSV cho các dự án của bạn."
+    },
+    "csv-to-html-mediawiki": {
+      "slug": "csv-sang-bang-html-mediawiki",
+      "title": "CSV sang Bảng HTML/MediaWiki",
+      "description": "Chuyển đổi CSV sang bảng tương thích với HTML hoặc MediaWiki."
+    },
+    "generate-from-template": {
+      "slug": "tao-tu-mau",
+      "title": "Tạo từ mẫu",
+      "description": "Tạo văn bản hàng loạt bằng cách sử dụng CSV làm nguồn dữ liệu cho một mẫu."
+    },
+    "web-to-text": {
+      "slug": "chuyen-doi-web-sang-van-ban",
+      "title": "Chuyển đổi Web sang Văn bản",
+      "description": "Trích xuất văn bản có thể đọc được từ một trang web từ URL của nó."
+    },
+    "csv-to-word": {
+      "slug": "csv-sang-word-docx",
+      "title": "CSV sang Word (DOCX)",
+      "description": "Chuyển đổi dữ liệu CSV thành một bảng trong tài liệu Word (.docx)."
+    },
+    "csv-to-kml": {
+      "slug": "csv-sang-kml",
+      "title": "CSV sang KML",
+      "description": "Chuyển đổi tọa độ CSV thành tệp KML cho bản đồ."
+    },
+    "csv-to-pdf": {
+      "slug": "csv-sang-pdf",
+      "title": "CSV sang PDF",
+      "description": "Chuyển đổi dữ liệu CSV của bạn thành một bảng trong tài liệu PDF."
+    },
+    "xml-to-csv": {
+      "slug": "xml-sang-csv-excel",
+      "title": "XML sang CSV",
+      "description": "Chuyển đổi dữ liệu từ định dạng XML sang CSV."
+    },
+    "sql-to-csv": {
+      "slug": "sql-sang-csv-excel",
+      "title": "SQL sang CSV",
+      "description": "Chuyển đổi một bản kết xuất SQL (INSERTs) thành một tệp CSV."
+    },
+    "csv-to-json": {
+      "slug": "csv-sang-json",
+      "title": "CSV sang JSON",
+      "description": "Chuyển đổi dữ liệu CSV sang định dạng JSON (mảng các đối tượng)."
+    },
+    "csv-to-multi-line": {
+      "slug": "csv-sang-nhieu-dong",
+      "title": "CSV sang Nhiều dòng",
+      "description": "Chuyển đổi mỗi hàng của CSV thành một khối văn bản được định dạng."
+    },
+    "csv-to-sql": {
+      "slug": "csv-sang-sql",
+      "title": "CSV sang SQL",
+      "description": "Tạo các câu lệnh SQL (INSERTs) từ dữ liệu CSV của bạn."
+    },
+    "csv-to-xml": {
+      "slug": "csv-sang-xml",
+      "title": "CSV sang XML",
+      "description": "Chuyển đổi dữ liệu CSV thành một tệp có định dạng XML."
+    },
+    "csv-to-yaml": {
+      "slug": "csv-sang-yaml",
+      "title": "CSV sang YAML",
+      "description": "Chuyển đổi dữ liệu ở định dạng CSV sang YAML."
+    },
+    "url-extractor": {
+      "slug": "trich-xuat-url",
+      "title": "Trích xuất URL",
+      "description": "Trích xuất tất cả các URL (liên kết) từ một khối văn bản."
+    },
+    "query-csv-with-sql": {
+      "slug": "truy-van-csv-bang-sql",
+      "title": "Truy vấn CSV bằng SQL",
+      "description": "Chạy các truy vấn SQL trực tiếp trên dữ liệu CSV của bạn."
+    },
+    "transpose-csv": {
+      "slug": "chuyen-vi-csv",
+      "title": "Chuyển vị CSV",
+      "description": "Đảo ngược các hàng và cột của tệp CSV của bạn."
+    }
+  }
+}

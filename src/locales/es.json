@@ -1,0 +1,243 @@
+{
+  "home": {
+    "pageTitle": "CSV Creator - Herramientas Gratuitas para Archivos CSV",
+    "pageDescription": "La suite más completa de herramientas online gratuitas para convertir, editar y gestionar tus archivos CSV. Transforma tus datos a JSON, Excel, PDF y más.",
+    "headerTitle": "CSV Creator",
+    "headerSubtitle": "Tu suite de herramientas definitiva para trabajar con archivos CSV",
+    "instructionsTitle": "¡Es súper fácil!",
+    "instruction1": "Pega o escribe tus datos CSV en el área de texto.",
+    "instruction2": "Elige una de nuestras potentes herramientas de la lista.",
+    "instruction3": "¡Transforma, edita o descarga tus datos al instante!",
+    "fileNameLabel": "Nombre del archivo",
+    "fileNamePlaceholder": "Ej: mis_datos_convertidos",
+    "fileNameDescription": "Tu archivo se descargará como \"{fileName}.csv\"",
+    "csvInputLabel": "Pega tus datos CSV aquí",
+    "csvInputPlaceholder": "id,nombre,email\n1,Juan,juan@ejemplo.com\n2,Ana,ana@ejemplo.com\n...",
+    "csvReady": "¡Tus datos CSV están listos para la acción!",
+    "downloadButton": "Descargar CSV",
+    "clearButton": "Limpiar",
+    "toolsSectionTitle": "Nuestras Herramientas CSV",
+    "toolsSectionSubtitle": "Convierte, edita y transforma tus datos CSV con nuestra completa selección de utilidades gratuitas.",
+    "whatIsCsvTitle": "¿Qué es un archivo CSV?",
+    "whatIsCsvText": "Un archivo CSV (Valores Separados por Comas) es un formato de texto plano que almacena datos tabulares. Cada línea representa una fila de datos, y cada valor dentro de esa fila está separado por una coma. Es un formato universalmente compatible, ideal para intercambiar datos entre diferentes aplicaciones como Excel, Google Sheets o bases de datos.",
+    "csvExampleTitle": "Ejemplo de CSV",
+    "csvExampleContent": "id,producto,precio,stock\n1,Portátil,1200,50\n2,Smartphone,800,150\n3,Auriculares,150,300",
+    "shareTitle": "¿Te gusta CSV Creator?",
+    "shareSubtitle": "¡Ayúdanos a llegar a más gente! Comparte esta herramienta con tus amigos o colegas. ¡Te lo agradeceríamos un montón!",
+    "shareButton": "Compartir ahora",
+    "footerText": "Hecho con ❤️ por mentes creativas.",
+    "footerRights": "© {year} CSV Creator. Todos los derechos reservados.",
+    "privacyPolicy": "Política de Privacidad",
+    "termsOfService": "Términos de Servicio"
+  },
+  "toolCategories": {
+    "toCsv": "Convertir a CSV",
+    "fromCsv": "Convertir desde CSV",
+    "other": "Otras Utilidades"
+  },
+  "toolpage": {
+    "loading": "Cargando herramienta...",
+    "toolNotFound": "Herramienta no encontrada",
+    "toolNotFoundDescription": "La herramienta que buscas no existe o ha sido movida.",
+    "breadcrumbHome": "Inicio",
+    "underConstructionTitle": "¡Herramienta en construcción!",
+    "underConstructionText": "Estamos trabajando duro para traer esta increíble herramienta. ¡Vuelve pronto!",
+    "backToHome": "Volver al inicio",
+    "shareWithFriends": "Compartir con amigos",
+    "addToFavorites": "Añadir a Favoritos",
+    "addFavoritesToastTitle": "¡Añadido a Favoritos!",
+    "addFavoritesToastDescription": "Puedes acceder a esta página desde los marcadores de tu navegador.",
+    "otherToolsTitle": "Descubre Otras Herramientas",
+    "downloadAsTxt": "Descargar como TXT",
+    "downloadAsXml": "Descargar como XML",
+    "downloadAsHtml": "Descargar como HTML"
+  },
+  "modals": {
+    "shareTitle": "¡Comparte esta herramienta!",
+    "shareDescription": "Si te ha gustado {toolTitle}, ¡compártela con tus amigos!",
+    "copyLink": "Copiar enlace",
+    "copied": "¡Copiado!",
+    "shareOn": "Compartir en",
+    "close": "Cerrar"
+  },
+  "toasts": {
+    "csvPasted": "¡CSV Pegado!",
+    "csvPastedDescription": "Tus datos están en el editor, listos para ser usados.",
+    "errorNoCsv": "¡No hay datos CSV!",
+    "errorNoCsvDescription": "Por favor, pega o escribe datos CSV antes de descargar.",
+    "downloaded": "¡Descargado!",
+    "downloadedDescription": "Tu archivo CSV se está descargando.",
+    "errorDownloading": "Error en la descarga",
+    "errorDownloadingDescription": "Hubo un problema al preparar tu archivo.",
+    "cleared": "¡Limpiado!",
+    "clearedDescription": "El área de texto está vacía.",
+    "notImplemented": "🚧 ¡Función no implementada!",
+    "notImplementedDescription": "¡Pero no te preocupes! Puedes solicitarla en tu próximo mensaje. 🚀",
+    "errorProcessing": "Error de procesamiento",
+    "errorProcessingDescription": "Hubo un problema al procesar tus datos. Por favor, comprueba el formato.",
+    "success": "¡Éxito!",
+    "successDescription": "La operación se completó correctamente."
+  },
+  "tools": {
+    "json-to-csv": {
+      "slug": "json-a-csv-excel",
+      "title": "JSON a CSV",
+      "description": "Convierte datos JSON a formato CSV de forma fácil y rápida."
+    },
+    "csv-to-delimited": {
+      "slug": "csv-a-delimitado",
+      "title": "CSV a Delimitado",
+      "description": "Cambia el delimitador de tu CSV (comas, punto y coma, tabuladores)."
+    },
+    "csv-to-fixed-width": {
+      "slug": "csv-a-ancho-fijo",
+      "title": "CSV a Ancho Fijo",
+      "description": "Convierte datos CSV a un formato de texto de ancho fijo."
+    },
+    "fixed-width-to-csv": {
+      "slug": "ancho-fijo-a-csv-excel",
+      "title": "Ancho Fijo a CSV",
+      "description": "Transforma texto de ancho fijo a un archivo CSV bien estructurado."
+    },
+    "yaml-to-csv": {
+      "slug": "yaml-a-csv-excel",
+      "title": "YAML a CSV",
+      "description": "Convierte datos en formato YAML a CSV."
+    },
+    "kml-to-csv": {
+      "slug": "kml-a-csv-excel",
+      "title": "KML a CSV",
+      "description": "Extrae datos de un archivo KML y conviértelos a CSV."
+    },
+    "csv-viewer-editor": {
+      "slug": "visor-editor-csv",
+      "title": "Visor y Editor de CSV",
+      "description": "Visualiza, edita y manipula tus datos CSV en una tabla interactiva."
+    },
+    "split-csv": {
+      "slug": "dividir-csv",
+      "title": "Dividir CSV",
+      "description": "Divide un archivo CSV grande en varios archivos más pequeños."
+    },
+    "geojson-to-csv": {
+      "slug": "geojson-a-csv-excel",
+      "title": "GeoJSON a CSV",
+      "description": "Convierte datos GeoJSON a formato CSV."
+    },
+    "html-links-to-csv": {
+      "slug": "enlaces-html-a-csv-excel",
+      "title": "Enlaces HTML a CSV",
+      "description": "Extrae todos los enlaces de un código HTML y guárdalos en un CSV."
+    },
+    "csv-to-markdown": {
+      "slug": "csv-a-markdown",
+      "title": "CSV a Markdown",
+      "description": "Convierte tus datos CSV en una tabla con formato Markdown."
+    },
+    "html-table-to-csv": {
+      "slug": "tabla-html-a-csv-excel",
+      "title": "Tabla HTML a CSV",
+      "description": "Extrae datos de una tabla HTML y conviértelos a CSV."
+    },
+    "csv-to-geojson": {
+      "slug": "csv-a-geojson",
+      "title": "CSV a GeoJSON",
+      "description": "Convierte datos CSV con coordenadas a formato GeoJSON."
+    },
+    "email-extractor": {
+      "slug": "extractor-de-emails",
+      "title": "Extractor de Emails",
+      "description": "Extrae todas las direcciones de correo electrónico de un texto."
+    },
+    "phone-extractor": {
+      "slug": "extractor-de-telefonos",
+      "title": "Extractor de Teléfonos",
+      "description": "Extrae todos los números de teléfono de un texto."
+    },
+    "generate-test-data": {
+      "slug": "generar-datos-de-prueba",
+      "title": "Generar Datos de Prueba",
+      "description": "Crea datos de prueba falsos en formato CSV para tus proyectos."
+    },
+    "csv-to-html-mediawiki": {
+      "slug": "csv-a-tabla-html-mediawiki",
+      "title": "CSV a Tabla HTML/MediaWiki",
+      "description": "Convierte CSV a tablas compatibles con HTML o MediaWiki."
+    },
+    "generate-from-template": {
+      "slug": "generar-desde-plantilla",
+      "title": "Generar desde Plantilla",
+      "description": "Genera texto masivo usando un CSV como fuente de datos para una plantilla."
+    },
+    "web-to-text": {
+      "slug": "convertir-web-a-texto",
+      "title": "Convertir Web a Texto",
+      "description": "Extrae el texto legible de una página web a partir de su URL."
+    },
+    "csv-to-word": {
+      "slug": "csv-a-word-docx",
+      "title": "CSV a Word (DOCX)",
+      "description": "Convierte datos CSV a una tabla en un documento de Word (.docx)."
+    },
+    "csv-to-kml": {
+      "slug": "csv-a-kml",
+      "title": "CSV a KML",
+      "description": "Convierte coordenadas CSV en un archivo KML para mapas."
+    },
+    "csv-to-pdf": {
+      "slug": "csv-a-pdf",
+      "title": "CSV a PDF",
+      "description": "Convierte tus datos CSV en una tabla dentro de un documento PDF."
+    },
+    "xml-to-csv": {
+      "slug": "xml-a-csv-excel",
+      "title": "XML a CSV",
+      "description": "Transforma datos desde formato XML a CSV."
+    },
+    "sql-to-csv": {
+      "slug": "sql-a-csv-excel",
+      "title": "SQL a CSV",
+      "description": "Convierte un volcado SQL (INSERTs) en un archivo CSV."
+    },
+    "csv-to-json": {
+      "slug": "csv-a-json",
+      "title": "CSV a JSON",
+      "description": "Convierte datos CSV a formato JSON (array de objetos)."
+    },
+    "csv-to-multi-line": {
+      "slug": "csv-a-multiples-lineas",
+      "title": "CSV a Múltiples Líneas",
+      "description": "Transforma cada fila de un CSV en un bloque de texto formateado."
+    },
+    "csv-to-sql": {
+      "slug": "csv-a-sql",
+      "title": "CSV a SQL",
+      "description": "Genera sentencias SQL (INSERTs) a partir de tus datos CSV."
+    },
+    "csv-to-xml": {
+      "slug": "csv-a-xml",
+      "title": "CSV a XML",
+      "description": "Convierte datos CSV a un archivo con formato XML."
+    },
+    "csv-to-yaml": {
+      "slug": "csv-a-yaml",
+      "title": "CSV a YAML",
+      "description": "Transforma datos en formato CSV a YAML."
+    },
+    "url-extractor": {
+      "slug": "extractor-de-urls",
+      "title": "Extractor de URLs",
+      "description": "Extrae todas las URLs (enlaces) de un bloque de texto."
+    },
+    "query-csv-with-sql": {
+      "slug": "consultar-csv-con-sql",
+      "title": "Consultar CSV con SQL",
+      "description": "Ejecuta consultas SQL directamente sobre tus datos CSV."
+    },
+    "transpose-csv": {
+      "slug": "transponer-csv",
+      "title": "Transponer CSV",
+      "description": "Invierte las filas y columnas de tu archivo CSV."
+    }
+  }
+}
