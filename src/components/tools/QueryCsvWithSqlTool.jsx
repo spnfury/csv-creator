@@ -11,7 +11,7 @@ const QueryCsvWithSqlTool = () => {
   const { t } = useTranslation();
   const { toast } = useToast();
   const [csvData, setCsvData] = useState('');
-  const [sqlQuery, setSqlQuery] = useState('SELECT * FROM csv_data');
+  const [sqlQuery, setSqlQuery] = useState('SELECT * FROM ?');
   const [queryResult, setQueryResult] = useState(null);
   const [error, setError] = useState(null);
 
@@ -70,28 +70,30 @@ const QueryCsvWithSqlTool = () => {
       </div>
     );
   };
-  
+
   const downloadResultAsCsv = () => {
     if (!queryResult || queryResult.length === 0) {
-        toast({ variant: 'destructive', title: 'Nothing to download', description: 'Please execute a query first.' });
-        return;
+      toast({ variant: 'destructive', title: 'Nothing to download', description: 'Please execute a query first.' });
+      return;
     }
     const headers = Object.keys(queryResult[0]);
     const csvRows = [
-        headers.join(','),
-        ...queryResult.map(row => headers.map(header => {
-            const value = String(row[header]);
-            return value.includes(',') ? `"${value}"` : value;
-        }).join(','))
+      headers.join(','),
+      ...queryResult.map(row => headers.map(header => {
+        const value = String(row[header]);
+        return value.includes(',') ? `"${value}"` : value;
+      }).join(','))
     ];
     const csvString = csvRows.join('\n');
     const blob = new Blob([csvString], { type: 'text/csv;charset=utf-8;' });
     const link = document.createElement('a');
-    link.href = URL.createObjectURL(blob);
+    const url = URL.createObjectURL(blob);
+    link.href = url;
     link.setAttribute('download', 'query_result.csv');
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
+    URL.revokeObjectURL(url);
   };
 
   return (
@@ -138,13 +140,13 @@ const QueryCsvWithSqlTool = () => {
           {t('queryCsvWithSql.resultTitle')}
         </h3>
         <div className="min-h-[150px] bg-gray-50 border rounded-md p-4">
-          {error ? <p className="text-blue-500">{error}</p> : renderTable()}
+          {error ? <p className="text-red-500">{error}</p> : renderTable()}
         </div>
       </div>
       {queryResult && queryResult.length > 0 && (
         <Button onClick={downloadResultAsCsv} variant="outline" className="w-full border-gray-400 text-gray-700 hover:bg-gray-100 font-bold text-lg py-6">
-            <Download className="w-6 h-6 mr-2" />
-            {t('queryCsvWithSql.downloadCsvButton')}
+          <Download className="w-6 h-6 mr-2" />
+          {t('queryCsvWithSql.downloadCsvButton')}
         </Button>
       )}
     </motion.div>

@@ -35,18 +35,19 @@ const generateFakeData = (type) => {
     case 'number':
       return Math.floor(Math.random() * 10000);
     case 'uuid':
-      return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
+      return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function (c) {
         var r = Math.random() * 16 | 0, v = c === 'x' ? r : (r & 0x3 | 0x8);
         return v.toString(16);
       });
     case 'city':
-        return cities[Math.floor(Math.random() * cities.length)];
+      return cities[Math.floor(Math.random() * cities.length)];
     case 'country':
-        return countries[Math.floor(Math.random() * countries.length)];
-    case 'date':
-        const start = new Date(2000, 0, 1);
-        const end = new Date();
-        return new Date(start.getTime() + Math.random() * (end.getTime() - start.getTime())).toISOString().split('T')[0];
+      return countries[Math.floor(Math.random() * countries.length)];
+    case 'date': {
+      const start = new Date(2000, 0, 1);
+      const end = new Date();
+      return new Date(start.getTime() + Math.random() * (end.getTime() - start.getTime())).toISOString().split('T')[0];
+    }
     default:
       return '';
   }
@@ -75,51 +76,53 @@ const GenerateTestDataTool = () => {
     newFields[index][prop] = value;
     setFields(newFields);
   };
-  
+
   const handleGenerateData = () => {
     if (rowCount <= 0 || fields.length === 0) {
-        toast({
-            title: "Error de configuración",
-            description: "Asegúrate de tener al menos un campo y más de 0 filas.",
-            variant: "destructive",
-        });
-        return;
+      toast({
+        title: "Error de configuración",
+        description: "Asegúrate de tener al menos un campo y más de 0 filas.",
+        variant: "destructive",
+      });
+      return;
     }
 
     const data = Array.from({ length: rowCount }, () => {
-        const row = {};
-        fields.forEach(field => {
-            row[field.name] = generateFakeData(field.type);
-        });
-        return row;
+      const row = {};
+      fields.forEach(field => {
+        row[field.name] = generateFakeData(field.type);
+      });
+      return row;
     });
 
     setGeneratedData(data);
     toast({
-        title: "¡Datos Generados!",
-        description: `${rowCount} filas de datos de prueba creadas exitosamente.`,
+      title: "¡Datos Generados!",
+      description: `${rowCount} filas de datos de prueba creadas exitosamente.`,
     });
   };
 
   const downloadFile = (content, fileName, contentType) => {
     const blob = new Blob([content], { type: contentType });
     const link = document.createElement('a');
-    link.href = URL.createObjectURL(blob);
+    const url = URL.createObjectURL(blob);
+    link.href = url;
     link.download = fileName;
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
+    URL.revokeObjectURL(url);
   };
 
   const handleExportCSV = () => {
     if (generatedData.length === 0) return;
     const headers = fields.map(f => f.name).join(',');
-    const rows = generatedData.map(row => 
-        fields.map(field => `"${String(row[field.name]).replace(/"/g, '""')}"`).join(',')
+    const rows = generatedData.map(row =>
+      fields.map(field => `"${String(row[field.name]).replace(/"/g, '""')}"`).join(',')
     ).join('\n');
     downloadFile(`${headers}\n${rows}`, 'datos_de_prueba.csv', 'text/csv;charset=utf-8;');
   };
-  
+
   const handleExportJSON = () => {
     if (generatedData.length === 0) return;
     downloadFile(JSON.stringify(generatedData, null, 2), 'datos_de_prueba.json', 'application/json;charset=utf-8;');
@@ -136,19 +139,19 @@ const GenerateTestDataTool = () => {
           {/* Columna de configuración */}
           <div>
             <h3 className="text-3xl font-bold text-gray-800 mb-6 flex items-center gap-3"><Settings2 className="w-8 h-8 text-blue-600" />Configuración de Datos</h3>
-            
+
             <div className="space-y-4 mb-8">
               {fields.map((field, index) => (
                 <motion.div key={index} layout className="flex items-center gap-2 bg-blue-50 p-3 rounded-lg border border-blue-200">
-                  <Input 
-                    placeholder="Nombre de columna" 
-                    value={field.name} 
+                  <Input
+                    placeholder="Nombre de columna"
+                    value={field.name}
                     onChange={(e) => handleFieldChange(index, 'name', e.target.value)}
                     className="flex-grow border-blue-300 focus:border-blue-500 focus:ring-blue-500"
                   />
-                  <ArrowRight className="text-blue-400"/>
-                  <select 
-                    value={field.type} 
+                  <ArrowRight className="text-blue-400" />
+                  <select
+                    value={field.type}
                     onChange={(e) => handleFieldChange(index, 'type', e.target.value)}
                     className="flex-grow p-2 border border-blue-300 rounded-md bg-white focus:outline-none focus:ring-2 focus:ring-blue-500"
                   >
@@ -164,12 +167,12 @@ const GenerateTestDataTool = () => {
             </div>
 
             <Button onClick={handleAddField} variant="outline" className="w-full mb-8 border-blue-500 text-blue-600 font-semibold hover:bg-blue-50">
-              <Plus className="w-5 h-5 mr-2"/>Añadir Campo
+              <Plus className="w-5 h-5 mr-2" />Añadir Campo
             </Button>
 
             <div className="mb-8">
               <label htmlFor="rowCount" className="text-xl font-bold text-gray-700 mb-2 block">Número de Filas</label>
-              <Input 
+              <Input
                 id="rowCount"
                 type="number"
                 value={rowCount}
@@ -178,9 +181,9 @@ const GenerateTestDataTool = () => {
                 className="w-full text-lg border-blue-300 focus:border-blue-500 focus:ring-blue-500"
               />
             </div>
-            
+
             <Button onClick={handleGenerateData} className="w-full bg-blue-600 hover:bg-blue-700 text-white text-xl font-bold py-6 rounded-lg">
-                Generar Datos
+              Generar Datos
             </Button>
           </div>
 
@@ -188,16 +191,16 @@ const GenerateTestDataTool = () => {
           <div>
             <h3 className="text-3xl font-bold text-gray-800 mb-6 flex items-center gap-3"><Download className="w-8 h-8 text-blue-600" />Resultado y Exportación</h3>
             {generatedData.length > 0 ? (
-              <motion.div initial={{opacity: 0}} animate={{opacity: 1}}>
+              <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
                 <div className="bg-gray-100 p-4 rounded-lg h-80 overflow-auto border border-gray-300 mb-6 font-mono text-sm">
                   <pre>{JSON.stringify(generatedData, null, 2)}</pre>
                 </div>
                 <div className="flex gap-4">
                   <Button onClick={handleExportCSV} className="flex-1 bg-green-600 hover:bg-green-700 text-white font-bold text-lg py-4">
-                    <FileText className="w-5 h-5 mr-2"/> CSV
+                    <FileText className="w-5 h-5 mr-2" /> CSV
                   </Button>
                   <Button onClick={handleExportJSON} className="flex-1 bg-blue-600 hover:bg-blue-700 text-white font-bold text-lg py-4">
-                    <FileJson className="w-5 h-5 mr-2"/> JSON
+                    <FileJson className="w-5 h-5 mr-2" /> JSON
                   </Button>
                 </div>
               </motion.div>

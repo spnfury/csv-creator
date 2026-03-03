@@ -50,7 +50,7 @@ function JsonToCsvTool() {
             });
             return;
         }
-        
+
         try {
             const replacer = (key, value) => value === null ? '' : value;
             const header = Object.keys(data[0]);
@@ -68,6 +68,7 @@ function JsonToCsvTool() {
             document.body.appendChild(link);
             link.click();
             document.body.removeChild(link);
+            URL.revokeObjectURL(url);
 
             toast({
                 title: "¡Conversión Exitosa!",
@@ -84,7 +85,7 @@ function JsonToCsvTool() {
             });
         }
     };
-    
+
     const handleClear = () => {
         setJsonContent('');
         setFileName('convertido');
@@ -145,7 +146,7 @@ function JsonToCsvTool() {
                     placeholder="Pega tu código JSON aquí..."
                 />
             </div>
-            
+
             <div className="flex flex-col md:flex-row gap-4 mb-8">
                 <Button
                     onClick={handleDownload}
@@ -163,7 +164,7 @@ function JsonToCsvTool() {
                     LIMPIAR
                 </Button>
             </div>
-            
+
             <div className="bg-blue-50 rounded-xl p-6 border-2 border-blue-200">
                 <h3 className="text-2xl font-bold text-blue-700 mb-4 flex items-center gap-2">
                     <AlertCircle className="w-8 h-8" />

@@ -239,5 +239,38 @@
       "title": "Chuyển vị CSV",
       "description": "Đảo ngược các hàng và cột của tệp CSV của bạn."
     }
+  },
+  "csvToJson": {
+    "csvInputLabel": "Dữ liệu CSV đầu vào",
+    "resultLabel": "Kết quả JSON",
+    "placeholder": "id,ten,email\n1,An,an@example.com",
+    "convertButton": "Chuyển đổi sang JSON",
+    "copyButton": "Sao chép JSON",
+    "downloadButton": "Tải xuống JSON",
+    "clearButton": "Xóa",
+    "successTitle": "Chuyển đổi thành công!",
+    "successDescription": "CSV của bạn đã được chuyển đổi sang JSON chính xác.",
+    "errorTitle": "Lỗi chuyển đổi",
+    "errorDescription": "Vui lòng dán dữ liệu CSV hợp lệ trước khi chuyển đổi.",
+    "copySuccessTitle": "Đã sao chép!",
+    "copySuccessDescription": "JSON đã được sao chép vào clipboard.",
+    "copyErrorTitle": "Không có gì để sao chép",
+    "copyErrorDescription": "Hãy chuyển đổi CSV sang JSON trước.",
+    "clearedTitle": "Đã xóa",
+    "clearedDescription": "Nội dung đã được xóa."
+  },
+  "queryCsvWithSql": {
+    "csvInputLabel": "Dữ liệu CSV",
+    "csvPlaceholder": "id,ten,tuoi\n1,An,30\n2,Binh,25",
+    "sqlInputLabel": "Truy vấn SQL",
+    "sqlPlaceholder": "SELECT * FROM ?",
+    "executeQueryButton": "Thực thi truy vấn",
+    "resultTitle": "Kết quả",
+    "noResult": "Thực thi một truy vấn để xem kết quả ở đây.",
+    "successTitle": "Truy vấn đã thực thi!",
+    "successDescription": "Tìm thấy {{count}} kết quả.",
+    "queryErrorTitle": "Lỗi truy vấn",
+    "queryErrorDescription": "Đã xảy ra lỗi khi thực thi truy vấn SQL. Kiểm tra cú pháp.",
+    "downloadCsvButton": "Tải kết quả dưới dạng CSV"
   }
 }

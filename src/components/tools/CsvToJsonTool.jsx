@@ -77,7 +77,7 @@ const CsvToJsonTool = () => {
       description: t('csvToJson.copySuccessDescription'),
     });
   };
-  
+
   const handleDownload = () => {
     if (!jsonResult) {
       toast({
@@ -96,6 +96,7 @@ const CsvToJsonTool = () => {
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
+    URL.revokeObjectURL(url);
   };
 
   return (
@@ -133,7 +134,7 @@ const CsvToJsonTool = () => {
           />
         </div>
       </div>
-      
+
       <div className="flex flex-wrap gap-4">
         <Button onClick={handleConvert} className="bg-blue-600 hover:bg-blue-700 text-white font-bold text-lg py-6 flex-grow">
           <Wand2 className="w-6 h-6 mr-2" />

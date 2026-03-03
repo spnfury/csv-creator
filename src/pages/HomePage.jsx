@@ -10,9 +10,9 @@ import ShareModal from '@/components/ShareModal';
 import LanguageSelector from '@/components/LanguageSelector';
 
 const toolCategories = [
-    { key: 'toCsv', icon: <Share2 />, tools: ['fixed-width-to-csv', 'geojson-to-csv', 'html-links-to-csv', 'html-table-to-csv', 'json-to-csv', 'kml-to-csv', 'sql-to-csv', 'xml-to-csv', 'yaml-to-csv'] },
-    { key: 'fromCsv', icon: <ClipboardList />, tools: ['csv-to-delimited', 'csv-to-fixed-width', 'csv-to-geojson', 'csv-to-html-mediawiki', 'csv-to-json', 'csv-to-kml', 'csv-to-markdown', 'csv-to-multi-line', 'csv-to-pdf', 'csv-to-sql', 'csv-to-word', 'csv-to-xml', 'csv-to-yaml'] },
-    { key: 'other', icon: <Scissors />, tools: ['csv-viewer-editor', 'split-csv', 'generate-from-template', 'generate-test-data', 'email-extractor', 'phone-extractor', 'url-extractor', 'web-to-text', 'query-csv-with-sql', 'transpose-csv'] },
+  { key: 'toCsv', icon: <Share2 />, tools: ['fixed-width-to-csv', 'geojson-to-csv', 'html-links-to-csv', 'html-table-to-csv', 'json-to-csv', 'kml-to-csv', 'sql-to-csv', 'xml-to-csv', 'yaml-to-csv'] },
+  { key: 'fromCsv', icon: <ClipboardList />, tools: ['csv-to-delimited', 'csv-to-fixed-width', 'csv-to-geojson', 'csv-to-html-mediawiki', 'csv-to-json', 'csv-to-kml', 'csv-to-markdown', 'csv-to-multi-line', 'csv-to-pdf', 'csv-to-sql', 'csv-to-word', 'csv-to-xml', 'csv-to-yaml'] },
+  { key: 'other', icon: <Scissors />, tools: ['csv-viewer-editor', 'split-csv', 'generate-from-template', 'generate-test-data', 'email-extractor', 'phone-extractor', 'url-extractor', 'web-to-text', 'query-csv-with-sql', 'transpose-csv'] },
 ];
 
 function HomePage() {
@@ -28,7 +28,7 @@ function HomePage() {
   const handlePaste = (e) => {
     const pastedText = e.clipboardData.getData('text');
     setCsvContent(pastedText);
-    
+
     if (pastedText.trim()) {
       toast({
         title: t('toasts.csvPasted'),
@@ -53,14 +53,15 @@ function HomePage() {
       const blob = new Blob([csvContent], { type: 'text/csv;charset=utf-8;' });
       const link = document.createElement('a');
       const url = URL.createObjectURL(blob);
-      
+
       link.setAttribute('href', url);
       link.setAttribute('download', `${fileName}.csv`);
       link.style.visibility = 'hidden';
       document.body.appendChild(link);
       link.click();
       document.body.removeChild(link);
-      
+      URL.revokeObjectURL(url);
+
       toast({
         title: t('toasts.downloaded'),
         description: t('toasts.downloadedDescription'),
@@ -102,7 +103,7 @@ function HomePage() {
       />
 
       <div className="min-h-screen bg-gradient-to-br from-white via-blue-50 to-white">
-        
+
         <header className="bg-blue-600 shadow-lg">
           <div className="container mx-auto px-4 py-8">
             <motion.div
@@ -164,7 +165,7 @@ function HomePage() {
                 className="w-full px-6 py-5 text-2xl md:text-3xl border-4 border-blue-300 rounded-xl focus:outline-none focus:ring-4 focus:ring-blue-500 focus:border-blue-500 transition-all"
                 placeholder={t('home.fileNamePlaceholder')}
               />
-              <p className="mt-2 text-xl text-gray-600">{t('home.fileNameDescription', {fileName})}</p>
+              <p className="mt-2 text-xl text-gray-600">{t('home.fileNameDescription', { fileName })}</p>
             </div>
 
             <div className="mb-8">
@@ -200,7 +201,7 @@ function HomePage() {
                 <Download className="w-10 h-10 mr-3" strokeWidth={3} />
                 {t('home.downloadButton')}
               </Button>
-              
+
               <Button
                 onClick={handleClear}
                 variant="outline"
@@ -222,15 +223,15 @@ function HomePage() {
               <h2 className="text-4xl md:text-5xl font-black text-blue-700">{t('home.toolsSectionTitle')}</h2>
               <p className="text-xl md:text-2xl text-gray-600 mt-4 max-w-3xl mx-auto">{t('home.toolsSectionSubtitle')}</p>
             </div>
-            
+
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {toolCategories.map(category => (
-                <ToolCard 
-                    key={category.key} 
-                    title={t(`toolCategories.${category.key}`)} 
-                    icon={category.icon} 
-                    tools={category.tools}
-                    langPrefix={langPrefix}
+                <ToolCard
+                  key={category.key}
+                  title={t(`toolCategories.${category.key}`)}
+                  icon={category.icon}
+                  tools={category.tools}
+                  langPrefix={langPrefix}
                 />
               ))}
             </div>
@@ -289,8 +290,8 @@ function HomePage() {
               <LanguageSelector />
             </div>
             <div className="flex justify-center gap-x-6 gap-y-2 flex-wrap mb-6">
-                <Link to="/privacy-policy" className="text-lg text-blue-100 hover:text-white font-semibold transition-colors">{t('home.privacyPolicy')}</Link>
-                <Link to="/terms-of-service" className="text-lg text-blue-100 hover:text-white font-semibold transition-colors">{t('home.termsOfService')}</Link>
+              <Link to="/privacy-policy" className="text-lg text-blue-100 hover:text-white font-semibold transition-colors">{t('home.privacyPolicy')}</Link>
+              <Link to="/terms-of-service" className="text-lg text-blue-100 hover:text-white font-semibold transition-colors">{t('home.termsOfService')}</Link>
             </div>
             <p className="text-xl md:text-2xl text-white font-semibold">
               {t('home.footerText')}
@@ -308,7 +309,7 @@ function HomePage() {
 const ToolCard = ({ title, icon, tools, langPrefix }) => {
   const { t } = useTranslation();
   const availableTools = tools.filter(toolKey => toolKeys.includes(toolKey));
-  
+
   return (
     <div className="bg-white rounded-2xl shadow-lg border border-gray-200 overflow-hidden h-full flex flex-col">
       <div className="p-6 bg-blue-50 border-b-2 border-blue-200">
@@ -321,8 +322,8 @@ const ToolCard = ({ title, icon, tools, langPrefix }) => {
         <ul className="space-y-1">
           {availableTools.map((toolKey) => (
             <li key={toolKey}>
-              <Link 
-                to={`${langPrefix}/${t(`tools.${toolKey}.slug`)}`} 
+              <Link
+                to={`${langPrefix}/${t(`tools.${toolKey}.slug`)}`}
                 className="flex items-center justify-between p-3 text-lg text-gray-800 rounded-lg hover:bg-blue-100 hover:text-blue-700 font-semibold transition-colors duration-200 group"
               >
                 <span>{t(`tools.${toolKey}.title`)}</span>

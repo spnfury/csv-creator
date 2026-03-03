@@ -239,5 +239,38 @@
       "title": "สลับแถวและคอลัมน์ CSV",
       "description": "สลับแถวและคอลัมน์ของไฟล์ CSV ของคุณ"
     }
+  },
+  "csvToJson": {
+    "csvInputLabel": "ข้อมูล CSV",
+    "resultLabel": "ผลลัพธ์ JSON",
+    "placeholder": "id,ชื่อ,อีเมล\n1,สมชาย,somchai@example.com",
+    "convertButton": "แปลงเป็น JSON",
+    "copyButton": "คัดลอก JSON",
+    "downloadButton": "ดาวน์โหลด JSON",
+    "clearButton": "ล้าง",
+    "successTitle": "แปลงสำเร็จ!",
+    "successDescription": "CSV ของคุณถูกแปลงเป็น JSON เรียบร้อยแล้ว",
+    "errorTitle": "ข้อผิดพลาดในการแปลง",
+    "errorDescription": "กรุณาวางข้อมูล CSV ที่ถูกต้องก่อนแปลง",
+    "copySuccessTitle": "คัดลอกแล้ว!",
+    "copySuccessDescription": "JSON ถูกคัดลอกไปยังคลิปบอร์ดแล้ว",
+    "copyErrorTitle": "ไม่มีอะไรให้คัดลอก",
+    "copyErrorDescription": "แปลง CSV เป็น JSON ก่อน",
+    "clearedTitle": "ล้างแล้ว",
+    "clearedDescription": "เนื้อหาถูกลบแล้ว"
+  },
+  "queryCsvWithSql": {
+    "csvInputLabel": "ข้อมูล CSV",
+    "csvPlaceholder": "id,ชื่อ,อายุ\n1,สมชาย,30\n2,สมหญิง,25",
+    "sqlInputLabel": "คำสั่ง SQL",
+    "sqlPlaceholder": "SELECT * FROM ?",
+    "executeQueryButton": "รันคำสั่ง",
+    "resultTitle": "ผลลัพธ์",
+    "noResult": "รันคำสั่งเพื่อดูผลลัพธ์ที่นี่",
+    "successTitle": "รันคำสั่งสำเร็จ!",
+    "successDescription": "พบ {{count}} ผลลัพธ์",
+    "queryErrorTitle": "ข้อผิดพลาดของคำสั่ง",
+    "queryErrorDescription": "เกิดข้อผิดพลาดในการรันคำสั่ง SQL กรุณาตรวจสอบไวยากรณ์",
+    "downloadCsvButton": "ดาวน์โหลดผลลัพธ์เป็น CSV"
   }
 }

@@ -34,7 +34,6 @@ const AppContent = () => {
 
       {/* Language and Tool Routes */}
       <Route path="/:lang" element={<ToolPage />} />
-      <Route path="/:slug" element={<ToolPage />} />
       <Route path="/:lang/:slug" element={<ToolPage />} />
       
       {/* Fallback Route */}

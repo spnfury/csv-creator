@@ -46,7 +46,7 @@ const SplitCsvTool = () => {
             const lines = csvContent.trim().split(/\r?\n/);
             const header = lines[0];
             const dataRows = lines.slice(1);
-            
+
             if (dataRows.length === 0) {
                 toast({
                     title: "No hay datos",
@@ -80,12 +80,13 @@ const SplitCsvTool = () => {
         const blob = new Blob([content], { type: 'text/csv;charset=utf-8;' });
         const link = document.createElement('a');
         const url = URL.createObjectURL(blob);
-        
+
         link.setAttribute('href', url);
         link.setAttribute('download', `${fileNamePrefix}${index + 1}.csv`);
         document.body.appendChild(link);
         link.click();
         document.body.removeChild(link);
+        URL.revokeObjectURL(url);
     };
 
     return (
@@ -96,7 +97,7 @@ const SplitCsvTool = () => {
         >
             <div className="mb-8">
                 <label htmlFor="csvInput" className="block text-2xl md:text-3xl font-bold text-gray-800 mb-3 flex items-center gap-2">
-                    <Upload className="w-8 h-8"/>
+                    <Upload className="w-8 h-8" />
                     Pega tu CSV aquí:
                 </label>
                 <textarea
@@ -123,7 +124,7 @@ const SplitCsvTool = () => {
                         min="1"
                     />
                 </div>
-                 <div>
+                <div>
                     <label htmlFor="fileNamePrefix" className="block text-xl font-bold text-gray-800 mb-2">
                         Prefijo de nombre de archivo
                     </label>
@@ -172,7 +173,7 @@ const SplitCsvTool = () => {
 
             <div className="mt-12 bg-blue-50 border-2 border-blue-200 text-blue-800 rounded-xl p-6">
                 <div className="flex items-start gap-4">
-                    <AlertCircle className="w-10 h-10 text-blue-500 mt-1"/>
+                    <AlertCircle className="w-10 h-10 text-blue-500 mt-1" />
                     <div>
                         <h3 className="text-2xl font-bold text-blue-900 mb-2">¿Cómo funciona?</h3>
                         <p className="text-lg">
