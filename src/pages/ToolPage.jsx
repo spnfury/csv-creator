@@ -6,7 +6,7 @@ import { Home, ChevronsRight, Wrench, Share2, Star } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { useToast } from "@/components/ui/use-toast";
 import ShareModal from "@/components/ShareModal";
-import { useTranslation, supportedLanguages, defaultLanguage, getToolKeyFromSlug, toolKeys } from '@/lib/i18n.jsx';
+import { useTranslation, translations, supportedLanguages, defaultLanguage, getToolKeyFromSlug, toolKeys } from '@/lib/i18n.jsx';
 import LanguageSelector from '@/components/LanguageSelector';
 import JsonToCsvTool from '@/components/tools/JsonToCsvTool';
 import CsvToDelimitedTool from '@/components/tools/CsvToDelimitedTool';
@@ -140,6 +140,7 @@ function ToolPage() {
   }
 
   const langPrefix = language === defaultLanguage ? '' : `/${language}`;
+  const siteUrl = 'https://csvcreator.com';
   
   const handleBookmark = () => {
     toast({
@@ -171,13 +172,69 @@ function ToolPage() {
   const ToolComponent = toolKey ? (componentMap[toolKey] || UnderConstruction) : UnderConstruction;
   const toolTitle = toolKey ? t(`tools.${toolKey}.title`) : t('toolpage.toolNotFound');
   const toolDescription = toolKey ? t(`tools.${toolKey}.description`) : t('toolpage.toolNotFoundDescription');
+  const metaTitle = toolKey ? (t(`tools.${toolKey}.metaTitle`) || `${toolTitle} - CSV Creator`) : `${toolTitle} - CSV Creator`;
+  const metaDescription = toolKey ? (t(`tools.${toolKey}.metaDescription`) || toolDescription) : toolDescription;
+  
+  // Build canonical and hreflang URLs
+  const currentSlug = toolKey ? t(`tools.${toolKey}.slug`) : '';
+  const canonicalPath = language === defaultLanguage ? `/${currentSlug}` : `/${language}/${currentSlug}`;
+  const canonicalUrl = `${siteUrl}${canonicalPath}`;
+
+  // Generate hreflang links for all languages
+  const hreflangLinks = toolKey ? supportedLanguages.map(lang => {
+    const langTranslations = translations[lang];
+    const langSlug = langTranslations?.tools?.[toolKey]?.slug;
+    if (!langSlug) return null;
+    const langPath = lang === defaultLanguage ? `/${langSlug}` : `/${lang}/${langSlug}`;
+    return { lang, href: `${siteUrl}${langPath}` };
+  }).filter(Boolean) : [];
+
+  // Schema.org JSON-LD
+  const jsonLd = toolKey ? {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": metaTitle,
+    "description": metaDescription,
+    "url": canonicalUrl,
+    "applicationCategory": "UtilitiesApplication",
+    "operatingSystem": "All",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "EUR"
+    },
+    "inLanguage": language,
+    "isPartOf": {
+      "@type": "WebSite",
+      "name": "CSV Creator",
+      "url": siteUrl
+    }
+  } : null;
   
   return (
     <>
       <Helmet>
-        <title>{`${toolTitle} - CSV Creator`}</title>
-        <meta name="description" content={toolDescription} />
+        <title>{metaTitle}</title>
+        <meta name="description" content={metaDescription} />
         <html lang={language} />
+        <link rel="canonical" href={canonicalUrl} />
+        {hreflangLinks.map(({ lang: hLang, href }) => (
+          <link key={hLang} rel="alternate" hrefLang={hLang} href={href} />
+        ))}
+        <link rel="alternate" hrefLang="x-default" href={`${siteUrl}/${currentSlug}`} />
+        {/* Open Graph */}
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content={metaTitle} />
+        <meta property="og:description" content={metaDescription} />
+        <meta property="og:url" content={canonicalUrl} />
+        <meta property="og:site_name" content="CSV Creator" />
+        <meta property="og:locale" content={language === 'es' ? 'es_ES' : language === 'fr' ? 'fr_FR' : language === 'th' ? 'th_TH' : language === 'vi' ? 'vi_VN' : 'en_US'} />
+        {/* Twitter Card */}
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:title" content={metaTitle} />
+        <meta name="twitter:description" content={metaDescription} />
+        {/* Schema.org JSON-LD */}
+        {jsonLd && <script type="application/ld+json">{JSON.stringify(jsonLd)}</script>}
       </Helmet>
       <ShareModal 
         isOpen={isShareModalOpen} 

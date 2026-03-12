@@ -5,7 +5,7 @@ import { Download, FileText, CheckCircle2, AlertCircle, ChevronRight, Share2, Cl
 import { Button } from '@/components/ui/button';
 import { useToast } from '@/components/ui/use-toast';
 import { Link } from 'react-router-dom';
-import { useTranslation, defaultLanguage, toolKeys } from '@/lib/i18n.jsx';
+import { useTranslation, supportedLanguages, defaultLanguage, toolKeys } from '@/lib/i18n.jsx';
 import ShareModal from '@/components/ShareModal';
 import LanguageSelector from '@/components/LanguageSelector';
 
@@ -93,6 +93,36 @@ function HomePage() {
         <title>{t('home.pageTitle')}</title>
         <meta name="description" content={t('home.pageDescription')} />
         <html lang={language} />
+        <link rel="canonical" href={language === defaultLanguage ? siteUrl : `${siteUrl}/${language}`} />
+        {supportedLanguages.map(lang => (
+          <link key={lang} rel="alternate" hrefLang={lang} href={lang === defaultLanguage ? siteUrl : `${siteUrl}/${lang}`} />
+        ))}
+        <link rel="alternate" hrefLang="x-default" href={siteUrl} />
+        {/* Open Graph */}
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content={t('home.pageTitle')} />
+        <meta property="og:description" content={t('home.pageDescription')} />
+        <meta property="og:url" content={language === defaultLanguage ? siteUrl : `${siteUrl}/${language}`} />
+        <meta property="og:site_name" content="CSV Creator" />
+        <meta property="og:locale" content={language === 'es' ? 'es_ES' : language === 'fr' ? 'fr_FR' : language === 'th' ? 'th_TH' : language === 'vi' ? 'vi_VN' : 'en_US'} />
+        {/* Twitter Card */}
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:title" content={t('home.pageTitle')} />
+        <meta name="twitter:description" content={t('home.pageDescription')} />
+        {/* Schema.org JSON-LD */}
+        <script type="application/ld+json">{JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "WebSite",
+          "name": "CSV Creator",
+          "url": siteUrl,
+          "description": t('home.pageDescription'),
+          "inLanguage": language,
+          "potentialAction": {
+            "@type": "SearchAction",
+            "target": `${siteUrl}/?q={search_term_string}`,
+            "query-input": "required name=search_term_string"
+          }
+        })}</script>
       </Helmet>
 
       <ShareModal

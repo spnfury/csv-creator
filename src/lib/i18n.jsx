@@ -77,7 +77,7 @@ export const LanguageProvider = ({ children }) => {
     
     if (typeof result === 'string' && options) {
       Object.keys(options).forEach(optKey => {
-        result = result.replace(new RegExp(`{{${optKey}}}`, 'g'), options[optKey]);
+        result = result.replace(new RegExp(`\\{${optKey}\\}`, 'g'), options[optKey]);
       });
     }
 
